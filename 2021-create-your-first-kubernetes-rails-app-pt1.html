@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="XxECaH45F1ImFQIdJxsuJjkRER8hXiphjrOQ3Vv6sL5QNLdyi_Znb9M7" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="kubernetes, docker, ops" name="keywords"><meta content="create a rails cluster with Kubernetes" name="description">
+<title>Create your first Rails app cluster with Kubernetes and Docker - Part 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-create-your-first-kubernetes-rails-app-pt1" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">Create your first Rails app cluster with Kubernetes and Docker - Part 1</h1>
+      <time>2021-08-10</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/kubernetes.html">kubernetes</a><a class="blog-tag" href="tags/docker.html">docker</a><a class="blog-tag" href="tags/ops.html">ops</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+The goal of this post is to get a cluster of Rails application servers running on your local machine. Part one will not include connecting to a database.</p>
+<p>
+Assumptions in this post:</p>
+<ul>
+  <li>
+You have Docker installed and running on your local machine, if that is not the case follow the steps outlined <a href="https://docs.docker.com/get-docker/" target="_blank">here</a> for your respective OS.  </li>
+  <li>
+This will use Homebrew for package installation. If you don’t have Homebrew or are unfamiliar with how to download packages on your local machine and are using a Mac you can <a href="https://docs.brew.sh/Installation" target="_blank">follow this guide</a>.  </li>
+  <li>
+You understand K8s terminology such as pod, deployment, service, replica.  </li>
+</ul>
+<p>
+Steps we will go through to stand up the cluster:</p>
+<ol>
+  <li>
+Create a local Rails app Docker Image.  </li>
+  <li>
+Push the local Docker Image to Docker Hub.  </li>
+  <li>
+Install packages needed for local Kubernetes clustering.  </li>
+  <li>
+Create a Kubernetes config file to build the cluster from.  </li>
+  <li>
+Apply the config file and establish the external connection.  </li>
+</ol>
+<h3>
+  Create a local Rails app Docker Image</h3>
+<p>
+To create the Docker image first create a new rails app <code class="inline">rails new k8s-test-app</code>.</p>
+<p>
+Then you need to create a Dockerfile at the root of the app directory:</p>
+<pre><code>cd /path/to/k8s-test-app &amp;&amp; touch Dockerfile</code></pre>
+<p>
+Paste these directives into the Dockerfile. These are the commands that will be used to build your Docker image.</p>
+<pre><code>FROM ruby:2.5
+RUN apt-get update -qq &amp;&amp; apt-get install -y nodejs
+WORKDIR /app
+COPY Gemfile ./Gemfile
+COPY Gemfile.lock ./Gemfile.lock
+RUN gem install bundler -v 2.0.1
+RUN bundle install
+COPY . /app
+EXPOSE 3000:3000
+CMD [&quot;rails&quot;, &quot;server&quot;, &quot;-b&quot;, &quot;0.0.0.0&quot;]</code></pre>
+<p>
+From the app root directory run the following command to build your image:</p>
+<pre><code>docker build --tag=k8s-test-app .</code></pre>
+<p>
+Find your image locally through the command <code class="inline">docker image ls</code>.</p>
+<h3>
+  Push the local Docker Image to Docker Hub</h3>
+<p>
+You will need to push your image to a Docker Repository, for this tutorial that will be Docker Hub. I have outlined those steps in <a href="2021-pushing-docker-image-to-dockerhub-tutorial.html" target="_blank">this post</a>.</p>
+<h3>
+  Install packages needed for local Kubernetes clustering</h3>
+<p>
+To begin using K8’s locally you will need to have a few packages installed. See the commands below to install these packages and their annotations for what their purpose is:</p>
+<pre><code>&lt;!-- install a virtual machine to run the cluster --&gt;
+brew install hyperkit
+
+&lt;!-- link the vm --&gt;
+brew link hyperkit
+
+&lt;!-- install a local K8s environment that gives you access to K8s functionality --&gt;
+brew install minikube</code></pre>
+<p>
+Also note that Minikube will give you access to Kubectl which is the command line interface for working with K8s clusters.</p>
+<h3>
+  Create a Kubernetes config file to build the cluster from</h3>
+<p>
+Create a YAML file at the root of your rails application directory:</p>
+<pre><code>cd /path/to/k8s-test-app &amp;&amp; touch deployment.yml</code></pre>
+<p>
+Next Paste of the below code snippet into the deployment.yml file. This is your configuration from which the cluster will be built. This file will create two instances of your container and link them to the service created in the second part of the file. A few things to note about this spec:</p>
+<ol>
+  <li>
+Use the image you created in Docker Hub to build your containers replace <code class="inline">spec.template.spec.containers.image</code> with your image.  </li>
+  <li>
+The port under <code class="inline">spec.template.spec.containers.ports.containerPort</code> must match what we declared in our Dockerfile so the container can be reached. In our case port 3000.  </li>
+  <li>
+The service is connected to the deployments pods through the label in the deployment (<code class="inline">metadata.labels.app</code>) and the selector in the service (<code class="inline">spec.selector.app</code>)  </li>
+  <li>
+We denote we want two container instances created through <code class="inline">spec.replicas</code> in the deployment.  </li>
+</ol>
+<pre><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-test-app-deployment
+  labels:
+    app: k8s-test-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: k8s-test-app
+  template:
+    metadata:
+      labels:
+        app: k8s-test-app
+    spec:
+      containers:
+      - name: k8s-test-app
+        image: joe-britton/first-repo:v.0.0.1
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8s-test-app-service
+spec:
+  selector:
+    app: k8s-test-app
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      nodePort: 30000</code></pre>
+<h3>
+  Apply the config file and establish the external connection.</h3>
+<p>
+First start the Minikube application using the Hyperkit VM.</p>
+<pre><code>minikube start --vm-driver=hyperkit</code></pre>
+<p>
+Now run the deployment to stand up the K8s cluster. This command will create the nodes and pods to run the Docker container, it will also create the service that will be used to communicate with the pods.</p>
+<pre><code>kubectl apply -f deployment.yml</code></pre>
+<p>
+To connect to the container through the browser locally an additional step is required:</p>
+<pre><code>minikube service k8s-test-app-service</code></pre>
+<p>
+This command will link the service you created to an IP address reachable from your browser. In most production deployments this step will not be required.</p>
+<p>
+After running this command minikube will open the app for you automatically and you should see  the default rails page rendered. If that is the case then you have successfully deployed your first K8s cluster 🎉🎉.</p>
+<p>
+Similar post:</p>
+<ul>
+  <li>
+<a href="2021-how-to-view-the-status-data-of-a-kubernetes-deployment.html" target="_blank">How to view the status data in a Kubernetes Deployment</a>  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

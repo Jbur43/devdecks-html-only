@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="RX0MDj0EchQnVUQObCdtHnAsEUFCGTs86-8HrCKcUd2A8OUQCnD-3Scx" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="jest, react, testing, cheatsheet" name="keywords"><meta content="Jest testing with react tips" name="description">
+<title>Jest testing with React cheatsheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-jest-testing-cheatsheet" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">Jest testing with React cheatsheet</h1>
+      <time>2021-04-28</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/jest.html">jest</a><a class="blog-tag" href="tags/react.html">react</a><a class="blog-tag" href="tags/testing.html">testing</a><a class="blog-tag" href="tags/cheatsheet.html">cheatsheet</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+A few notes to refer to when needing to write JavaScript tests using Jest and React:</p>
+<p>
+*This is not a comprehensive post. It is a brief reference for developers with some experience using Jest but haven’t used it recently.</p>
+<ol>
+  <li>
+Two types of frequently used test expectations are:  </li>
+</ol>
+<ul>
+  <li>
+Expecting the DOM tree to match that of a snapshot  </li>
+  <li>
+A functional test where you execute an event and match an updated value against an expected state.  </li>
+</ul>
+<div>
+</div>
+<ol start="2">
+  <li>
+A few frequently used Jest expectations are:  </li>
+</ol>
+<ul>
+  <li>
+<code class="inline">toHaveBeenCalled</code> - Use to expect a certain function to have been invoked.  </li>
+  <li>
+<code class="inline">toHaveBeenCalledWith</code> - Use to expect a certain function to have been invoked with a specific argument(s).  </li>
+  <li>
+<code class="inline">toMatchSnapshot</code> - Use to expect a DOM tree to match your expected HTML document.  </li>
+  <li>
+<code class="inline">toHaveProperty</code> - Use to check if an object has a specific property.  </li>
+</ul>
+<div>
+</div>
+<ol start="3">
+  <li>
+To mock a JavaScript import you can use <code class="inline">jest.mock</code> that will be used in place of the typically imported file:  </li>
+</ol>
+<pre><code>jest.mock(&quot;components/results&quot;, () =&gt; (() =&gt; (&lt;div className=&quot;mock&quot;&gt;User Results&lt;/div&gt;)));</code></pre>
+<ol start="4">
+  <li>
+Use <code class="inline">beforeEach</code> to perform any setup needed for a group of tests. You can use this to set shared variables/state or execute any functions that should be run before each test.  </li>
+</ol>
+<div>
+</div>
+<ol start="5">
+  <li>
+Use <code class="inline">jest.fn()</code> function to execute a mock function. You can also give the mock function a name using <code class="inline">jest.fn().mockName(&quot;myFunctionName&quot;)</code>.  </li>
+</ol>
+<div>
+</div>
+<ol start="6">
+  <li>
+Some expectations also have an inverse using the <code class="inline">not</code> function. Example:  </li>
+</ol>
+<pre><code>expect({name: &quot;joe&quot;}).not.toHaveProperty(&quot;email&quot;)</code></pre>
+<ol start="7">
+  <li>
+When mocking an import and you want to use some of the actual behavior of the module but not all, you can use <code class="inline">jest.requireActual</code>  </li>
+</ol>
+<pre><code>jest.mock(&quot;react-router-dom&quot;, () =&gt; ({
+  __esModule: true,
+  ...jest.requireActual(&quot;react-router-dom&quot;),
+  useParams: jest.fn().mockName(&quot;useParams&quot;)
+}));</code></pre>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

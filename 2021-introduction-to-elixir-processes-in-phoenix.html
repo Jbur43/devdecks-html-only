@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="FRg8Eh46TQcXBg8RNRgQUDcZGEU4bBQEgjQGDs9tckiWpZj8bskpsXQL" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="elixir, phoenix, beam" name="keywords"><meta content="elixir processes in phoenix" name="description">
+<title>An introduction to BEAM/Elixir processes in Phoenix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-introduction-to-elixir-processes-in-phoenix" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">An introduction to BEAM/Elixir processes in Phoenix</h1>
+      <time>2021-05-28</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/elixir.html">elixir</a><a class="blog-tag" href="tags/phoenix.html">phoenix</a><a class="blog-tag" href="tags/beam.html">beam</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+I will introduce this through a two example web interaction</p>
+<ol>
+  <li>
+A web request that runs some application code.  </li>
+  <li>
+A web request that runs some application code and that application code reaches out to a database.  </li>
+</ol>
+<p>
+Each step of this interaction is a separate Elixir Process.</p>
+<p>
+The Phoenix web framework sets up an HTTP server using the libraries Cowboy and Ranch. When a request is sent to your application over HTTP a Cowboy process is spawned to handle it, once the request is received and validated another Elixir Process is spawned and therefore supervised by the Cowboy process. This newly spawned Process is for the application code to handle any business logic required before the HTTP server responds. Once the application process has finished executing a message is sent back to the Cowboy/HTTP process that generated it and the connection is closed.</p>
+<p>
+Now let’s say the application code called an <code class="inline">Ecto.Repo</code> database for a query, this scenario is a slightly different.</p>
+<p>
+When your Phoenix application was started, assuming you are using Ecto for database interactions, a pool of (usually 10) long running processes are started immediately and waiting to be used for code execution. These are started immediately instead of being spawned each time the Repo is called because connecting to the database is a “heavy” task, meaning it takes more time and computer resources to execute than other processes that are not pooled. The Erlang and Elixir process pooling technology is Poolboy.</p>
+<p>
+When your application code makes a query using Repo, it uses one of the established pooled process connections to do so. Once the query completes then a message is sent to the application process. At that point the application process continues any additional code execution before sending the final response to the HTTP process.</p>
+<p>
+There are many more processes running in any Phoenix application. My hope is after reading this it will give you confidence to explore more of the ecosystem.</p>
+<h2>
+  Aside: Observer</h2>
+<p>
+To get a visualization of Elixir processes in your Phoenix application run the following command:</p>
+<pre><code class="makeup elixir"><span class="n">iex</span><span class="w"> </span><span class="o">-</span><span class="nc">S</span><span class="w"> </span><span class="n">mix</span><span class="w"> </span><span class="n">phx</span><span class="o">.</span><span class="n">server</span></code></pre>
+<p>
+This starts your server in interactive mode. From there you start Observer, Elixirs process introspection tool through this command:</p>
+<pre><code class="makeup elixir"><span class="ss">:observer</span><span class="o">.</span><span class="n">start</span></code></pre>
+<p>
+Once opened navigate to the applications tab to get a diagram of all running processes, you can try restarting processes to get more hands on experience with their behavior.</p>
+<p>
+More Elixir process posts:
+<a href="2021-beam-elixir-processes-explained.html" target="_blank">Processes for web programmers</a>,
+<a href="2021-let-it-crash-explained.html" target="_blank">Let it crash explained</a>,
+<a href="2021-elixir-processes-concurrency-and-parallelism.html" target="_blank">Processes and concurrency</a>,
+<a href="2021-elixir-process-module-cheatsheet.html" target="_blank">Process module cheatsheet</a></p>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

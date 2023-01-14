@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="fh8YBR1afi8CAh0nc2JlKT40ewYjNXwgOgBpBo1nJnwr47QbXgKvBx4q" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="elixir, deck, elixir-deck" name="keywords"><meta content="Understanding Elixir Task through explanation" name="description">
+<title>Understanding Elixir Task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-understanding-elixir-task" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">Understanding Elixir Task</h1>
+      <time>2021-09-29</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/elixir.html">elixir</a><a class="blog-tag" href="tags/deck.html">deck</a><a class="blog-tag" href="tags/elixir-deck.html">elixir-deck</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+This and the other “Deck” posts are a repurposing of flashcard study decks to Q&amp;A blog posts. Google was not showing love to this content as a set of flashcards and I didn’t want to delete them entirely, I hope you find it useful.</p>
+<h3>
+  What is an Elixir Task?</h3>
+<p>
+It is a means of spawning an Elixir Process but with asynchronous capabilities, which is its main use case.</p>
+<h3>
+  When do you use a Task?</h3>
+<p>
+They are often used for interacting with external services. Using a <code class="inline">Task</code> in this way makes otherwise synchronous code asynchronous, so your code can do other work while the <code class="inline">Task</code> is working.</p>
+<h3>
+  What does the code look like for spawning an asynchronous Task and reading its message upon completion?</h3>
+<pre><code>=&gt; task = Task.async(fn -&gt; IO.puts(&quot;processing&quot;) end) 
+=&gt; Task.await(task)</code></pre>
+<p>
+In the above example the <code class="inline">Task</code> is executed using <code class="inline">async/1</code> and its message will be available as a result of <code class="inline">await/1</code>.</p>
+<h3>
+  What Task function should be used when you have no interest in the result of its completion?</h3>
+<p>
+<code class="inline">start/1</code>, which accepts an anonymous function to be executed. The anonymous function must have no arguments.</p>
+<h3>
+  Can you spawn multiple Tasks and await all of their completion?</h3>
+<p>
+Yes. You can map over a list of <code class="inline">Task</code>s and provide the <code class="inline">Task.await</code> function as the callback to each task in the list.</p>
+<pre><code>=&gt; tasks = Enum.reduce(0..9, [], fn _, acc -&gt; [Task.async(&amp;any_job/0) | acc] end) 
+
+=&gt; Enum.map(tasks, &amp;Task.await/1)</code></pre>
+<h3>
+  Do Tasks use message passing?</h3>
+<p>
+Not often. A <code class="inline">Task</code> is used for one specific action.</p>
+<p>
+For your continued enjoyment:</p>
+<ul>
+  <li>
+<a href="tags/elixir-deck.html" target="_blank">More Elixir lang decks</a>  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

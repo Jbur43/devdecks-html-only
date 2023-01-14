@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="dSonA2ZYPz43GTE-ZAVNLhtdejYfSh4O0BsV5nMNNwfx-puGzm8qT8LM" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="javascript" name="keywords"><meta content="Javascript differences between window.location assign, open, replace, and href=" name="description">
+<title>Differences between window assign, open, replace, and href= in JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-windowlocation-open-replace-assign-differences" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">Differences between window assign, open, replace, and href= in JS</h1>
+      <time>2021-08-28</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/javascript.html">javascript</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+When using JavaScript there are a number of ways to load new documents in the browser. In this post I attempt to shed some light on differences between some/most of the options frequently reached for.</p>
+<h3>
+  window.location.assign("some_url") vs window.location.href = "some_url"</h3>
+<p>
+Functionally there is no difference between these two methods for loading a new document (<a href="https://stackoverflow.com/questions/10302905/location-href-property-vs-location-assign-method" target="_blank">source</a>).</p>
+<p>
+It has been mentioned that using <code class="inline">window.location.href = &quot;some_url&quot;</code> may be slightly more performant because setting a property value uses fewer resources than invoking a function, eg <code class="inline">window.location.assign(&quot;some_url&quot;)</code>.</p>
+<p>
+In both of these cases a new document will be loaded and the browser history will be preserved so clicking the back button in the browser will take the user back the the previous page they came from. The document will be opened in the same browser window the user came from.</p>
+<h3>
+  window.location.replace("some_url")</h3>
+<p>
+This function will open a new document. The document will be opened in the same browser window the user came from. The difference here is the history will be reset so clicking the back button in the browser will not take the user back to the previous page.</p>
+<h3>
+  window.open("some_url")</h3>
+<p>
+This function will open the new document in a new browser window.</p>
+<p>
+Similar post</p>
+<ul>
+  <li>
+<a href="2021-copy-collection-text-to-clipboard-js.html" target="_blank">How to copy text from a collection of non input elements in JavaScript</a>  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

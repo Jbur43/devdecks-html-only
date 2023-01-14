@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="fwgnJm1SHRUye1VJeGoGBzoTEgpUFzIT61Ll95YaX9x-J2UkJtPR7YZT" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="oauth, rails, clean-code" name="keywords"><meta content="code optimization" name="description">
+<title>When early code optimization is okay, an example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-early-code-optimization-okay" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">When early code optimization is okay, an example</h1>
+      <time>2021-05-02</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/oauth.html">oauth</a><a class="blog-tag" href="tags/rails.html">rails</a><a class="blog-tag" href="tags/clean-code.html">clean-code</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+An often mentioned issue within software development is premature code optimization, which happens when a developer makes too many assumptions about the future context of what they are currently developing. It can make a codebase confusing when someone else is trying to interpret functionality later on.</p>
+<p>
+I had a situation where I opted to optimize Rails controller code before I had to, but I think it was the correct decision, but first the code snippets:</p>
+<p>
+Code before the optimization:</p>
+<pre><code class="ruby">def accept_client_credentials_grant
+  org_options = OrganizationOptions.find_by!(uuid: params[:uuid])
+
+  response = OauthAccessGrant.create_and_update_client_credentials(org_options, grant_params)
+
+  render json: response
+end</code></pre>
+<p>
+Code after the optimization:</p>
+<pre><code class="ruby">def accept_grant
+  org_options = OrganizationOptions.find_by!(uuid: params[:uuid])
+
+  case params[:grant][:grant_type]
+  when &quot;client_credentials&quot;
+    response = OauthAccessGrant.create_and_update_client_credentials(org_options, grant_params)
+  else
+    StandardError.new(&quot;OAuth Grant Type Not Supported&quot;)
+  end
+
+  render json: response
+end</code></pre>
+<p>
+In the code examples above I ended up switching the <code class="inline">accept_client_credentials_grant</code> controller method to <code class="inline">accept_grant</code> and then used a case statement as a proxy to determine what the app should do based on the <code class="inline">grant_type</code> that was sent to the app through <code class="inline">params</code>.</p>
+<p>
+This controller was an OAuth controller, which has established workflows. I was only building this OAuth server to handle one workflow, but given that the app I built on has many different customers, many of which have unique auth needs, I felt it made sense to add this proxy now.</p>
+<p>
+This early optimization prevents the situation of a different developer needing to update this method later on and not knowing what the value for <code class="inline">grant_type</code> would exactly look like. For all they know the param value could be “Client Credentials”, “CLIENT_CREDENTIALS” or any number of other options. Given that I knew of future potential workflows in advance and could see a future issue for other developers, I chose to optimize this code early, but in my opinion not prematurely.</p>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

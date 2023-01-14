@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="EiMGaU4xOTgCGgIRIWYlOAJWKU8vQx8VXoIXybaMsw6PjVNJ49o-JnM8" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="react, hooks, jest" name="keywords"><meta content="mocking react hooks" name="description">
+<title>How to mock custom React Hooks with Jest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-mock-custom-react-hooks-with-jest" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">How to mock custom React Hooks with Jest</h1>
+      <time>2021-03-16</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/react.html">react</a><a class="blog-tag" href="tags/hooks.html">hooks</a><a class="blog-tag" href="tags/jest.html">jest</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+*This post assumes you already have Jest configured in your application.</p>
+<p>
+I was using a custom hook in a component that needed to be mocked out in order to properly produce a snapshot test. I chose to mock the this particular function because it was dependent on a part of the DOM that was not available for the hook to be operational.</p>
+<p>
+From the below component I will show you how to mock only the <code class="inline">useClassNameWrapper</code> hook and leave the <code class="inline">useParams</code> hook unmocked.</p>
+<pre><code>&lt;!-- presentation.js --&gt;
+
+import {useClassNameWrapper, useParams} from &quot;lib/hooks&quot;;
+
+
+function Presentation(props) {
+  const [classNameWrapper, setClassNameWrapper] = useState(null);
+  if(!classNameWrapper) {
+    setClassNameWrapper(&quot;presentation-wrapper&quot;);
+  }
+  useClassNameWrapper(classNameWrapper);
+}</code></pre>
+<p>
+In the test file I had to mock the import from <code class="inline">lib/hooks</code>, in this case the custom hooks from my <code class="inline">/lib</code> folder.</p>
+<p>
+In order to mock an import you need to call on the <code class="inline">mock</code> function from the <code class="inline">jest</code> object and then return an object that matches the exports. In the below example an object is returned containing the exported <code class="inline">usePageClass</code> as a mock function:</p>
+<pre><code>&lt;!-- test.js --&gt;
+
+jest.mock(&quot;lib/hooks&quot;, () =&gt; ({
+  usePageClass: jest.fn()
+}));</code></pre>
+<p>
+You will notice that this does not quite match the exports from the example code because this is not returning <code class="inline">useParams</code> from the mock and that is because we want the actual function to be called. In order to accomplish this we will use the <code class="inline">jest</code> function <code class="inline">requireActual</code>, ex:</p>
+<pre><code>&lt;!-- test.js --&gt;
+
+jest.mock(&quot;lib/hooks&quot;, () =&gt; ({
+  ...jest.requireActual(&quot;lib/hooks&quot;),
+  usePageClass: jest.fn()
+}));</code></pre>
+<p>
+Now any additional hook(s) that needs to be mocked out can be added to the <code class="inline">jest.mock</code> and any that do not will be handled by the <code class="inline">requireActual</code> function.</p>
+<p>
+Note: I wrote a Jest cheatsheet for React developers that you may also find useful <a href="2021-jest-testing-cheatsheet.html" target="_blank">here</a>. </p>
+<br />
+<p>
+Resources I found useful while working on this this:</p>
+<ul>
+  <li>
+<a href="https://stackoverflow.com/questions/59312671/mock-only-one-function-from-module-but-leave-rest-with-original-functionality">https://stackoverflow.com/questions/59312671/mock-only-one-function-from-module-but-leave-rest-with-original-functionality</a>  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

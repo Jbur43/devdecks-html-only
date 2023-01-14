@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="VXc_YWY2dDYRH1xaHQInFUdsBzcDQyY61Gm6KQ6LxJdkyKEPrXPE12dT" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="rails, mvc, form" name="keywords"><meta content="how to setup models views and controllers for nested resources" name="description">
+<title>Rails nested resources MVC complete example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-rails-nested-resources-mvc-complete-example" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">Rails nested resources MVC complete example</h1>
+      <time>2021-11-01</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/rails.html">rails</a><a class="blog-tag" href="tags/mvc.html">mvc</a><a class="blog-tag" href="tags/form.html">form</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+This post provides references to the code changes that need to be made to a scaffolded rails app in order to render a form for the resources. In the application I am providing the example from those resources are User and Form, where a form is rendered for a user. This is a survey rendering application, similar to TypeForm or SurveyMonkey.</p>
+<p>
+This post will use the <code class="inline">form#edit</code> action as an example but this can be applied to any of the resources.</p>
+<h3>
+  Generating the scaffold</h3>
+<p>
+For those that want to code along with the post, you can start by creating a new rails application and generating the following two scaffolds:</p>
+<pre><code>rails g scaffold Form
+rails g scaffold User</code></pre>
+<p>
+This will create all of the resources needed to create and render forms and users, but we will make changes to the generated files to account for forms being nested within users.</p>
+<h3>
+  Creating the tables and ActiveRecord relationships</h3>
+<p>
+To establish the relationships between the Form and User I added a reference to the users table in the form <code class="inline">create_table</code>. Adding the reference requires the users table to exist before running the migration:</p>
+<pre><code>~/db/migrate/20211111221212_create_forms.rb</code></pre>
+<pre><code>class CreateForms &lt; ActiveRecord::Migration[6.1]
+  def change
+    create_table :forms do |t|
+      t.references :user, index: true, null: false
+      t.string :name
+
+      t.timestamps
+    end
+  end
+end</code></pre>
+<p>
+In the <code class="inline">Form</code> and <code class="inline">User</code> models add the <code class="inline">belongs_to</code> and <code class="inline">has_many</code> associations appropriately:</p>
+<pre><code>~/app/models/form.rb</code></pre>
+<pre><code>class Form &lt; ApplicationRecord
+  belongs_to :user
+end</code></pre>
+<pre><code>~/app/models/user.rb</code></pre>
+<pre><code>class User &lt; ApplicationRecord
+  has_many :forms
+end</code></pre>
+<h3>
+  Update routes to be nested</h3>
+<p>
+Update the routes file so <code class="inline">:forms</code> are scoped under <code class="inline">:users</code> because in this system a <code class="inline">Form</code> will only exist under the context of a <code class="inline">User</code>. This will also update the url helpers rails providers, which we will need to update references to later in the post.</p>
+<pre><code>~/config/routes.rb</code></pre>
+<pre><code>resources :users do
+  resources :forms
+end</code></pre>
+<p>
+Run the <code class="inline">rails routes</code> command to see the changes to the routes definitions. For our edit example the new url is:</p>
+<pre><code>/users/:user_id/forms/:id/edit</code></pre>
+<h3>
+  Updating FormsController#edit</h3>
+<p>
+In the <code class="inline">FormsController</code> an update needs to be made to get form for a specific user. Since the route to access the <code class="inline">edit</code> action is <code class="inline">/users/:user_id/forms/:id/edit</code> we now have the <code class="inline">user_id</code> and <code class="inline">id</code> (from_id) available to us as parameters to query for data.</p>
+<p>
+In the <code class="inline">edit</code> example below we query for the user first and then filter the forms to find the correct resource. Setting the <code class="inline">@form</code> and <code class="inline">@user</code> variables will give us access to them in the view template:</p>
+<pre><code>class FormsController &lt; ApplicationController
+  before_action :set_user, only: %i[ edit ]
+
+  def edit
+    @form = @user.forms.find(params[:id].to_i)
+  end
+
+  private
+
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+end</code></pre>
+<h3>
+  Updating views for FormsController#edit</h3>
+<p>
+When generating the scaffold for <code class="inline">Form</code> you an edit template was created for you that looks similar to this:</p>
+<pre><code>~/app/views/forms/edit.html.erb</code></pre>
+<pre><code>&lt;h1&gt;Editing Form&lt;/h1&gt;
+
+&lt;%= render &#39;form&#39;, form: @form %&gt;
+
+&lt;%= link_to &#39;Show&#39;, @form %&gt; |
+&lt;%= link_to &#39;Back&#39;, forms_path %&gt;</code></pre>
+<p>
+Since the forms were updated to be nested, we will need to account for two changes:</p>
+<ol>
+  <li>
+The new url path helpers  </li>
+  <li>
+The added data needed for the form to render  </li>
+</ol>
+<p>
+After the updates the new <code class="inline">edit.html.erb</code> will look like the below code example. The links were updated with the correct url paths and the data we provide to the form partial is accounted for.</p>
+<pre><code>&lt;h1&gt;Editing Form&lt;/h1&gt;
+
+&lt;%= render &#39;form&#39;, form_and_user: [@user, @form] %&gt;
+
+&lt;%= link_to &#39;Show&#39;, user_form_path(@form) %&gt; |
+&lt;%= link_to &#39;Back&#39;, user_forms_path %&gt;</code></pre>
+<p>
+Finally update the references in the form partially to account for the changed parameter name as the example below illustrates:</p>
+<p>
+Orginal form partial:</p>
+<pre><code>~/app/views/forms/_form.html.erb</code></pre>
+<pre><code>&lt;%= form_with(model: form) do |form| %&gt;
+# form elements
+&lt;% end %&gt;</code></pre>
+<p>
+Updated form partial:</p>
+<pre><code>&lt;%= form_with(model: form_and_user) do |form| %&gt;
+# form elements
+&lt;% end %&gt;</code></pre>
+<p>
+After making these updates you should be able to navigate to <code class="inline">http://localhost:3000/users/1/forms/1/edit</code> successfully.</p>
+<p>
+Thanks for tuning in! I hope you found this post helpful today.</p>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

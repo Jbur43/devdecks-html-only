@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="Cjg1EEEfGSEZNwcBZ1tCHAI_fgB9LDdyCpva-TOpZoUb_n7mDY9A1ku3" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="elixir, deck, elixir-deck" name="keywords"><meta content="Understanding Elixir Supervisor through explanation" name="description">
+<title>Understanding Elixir Supervisor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-understanding-elixir-supervisor" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">Understanding Elixir Supervisor</h1>
+      <time>2021-09-30</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/elixir.html">elixir</a><a class="blog-tag" href="tags/deck.html">deck</a><a class="blog-tag" href="tags/elixir-deck.html">elixir-deck</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+This and the other “Deck” posts are a repurposing of flashcard study decks to Q&amp;A blog posts. Google was not showing love to this content as a set of flashcards and I didn’t want to delete them entirely, I hope you find it useful.</p>
+<h3>
+  What is the function of an Elixir Supervisor?</h3>
+<p>
+It is a process that monitors other processes and restarts them based on a specified supervision strategy.</p>
+<h3>
+  How are supervisors related to the Elixir axiom "let it crash"?</h3>
+<p>
+Supervisors will spin up new processes in the event of a failure. If a process errors/fails a new one will be started without the developer having to step in and restart anything. Aka they can “let it crash”.</p>
+<h3>
+  How are processes under supervision related to the Supervising process?</h3>
+<p>
+They are considered child processes of the supervisor.</p>
+<h3>
+  How do you start a supervisor that monitors child processes?</h3>
+<p>
+You pass a list of child processes to the supervisor. Each child process is a <code class="inline">Map</code> that contains keys of <code class="inline">id</code> and <code class="inline">start</code>. The <code class="inline">id</code> is the process and <code class="inline">start</code> is a <code class="inline">Tuple</code> containing information on how to run the process. Example below: </p>
+<pre><code>children = [ %{ id: ChildProcess, start: {ChildProcess, :start_link, [[:initial_state]]} } ] 
+{:ok, pid} = Supervisor.start_link(children, strategy: :one_for_one)</code></pre>
+<h3>
+  What supervision strategy should be used if you want only the specific child process that terminates to be restarted?</h3>
+<p>
+<code class="inline">one_for_one</code></p>
+<h3>
+  What supervision strategy should be used if you want all child processes to be restarted if any of them terminate?</h3>
+<p>
+<code class="inline">one_for_all</code></p>
+<h3>
+  What supervision strategy should be used if you want all processes started after the terminated one to also be terminated and restarted?</h3>
+<p>
+<code class="inline">rest_for_one</code></p>
+<h3>
+  What is a supervision tree?</h3>
+<p>
+It is a hierarchy of process supervisors. This means that a process that is under supervision can also have its own child processes that it supervises.</p>
+<ul>
+  <li>
+<a href="tags/elixir-deck.html" target="_blank">More Elixir lang decks</a>  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="BnkgZlEjIzoBJiceHDI_H2ETPD0KNy4YK3I4hublJgewRFtj5GpYaMZi" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="kubernetes" name="keywords"><meta content="Kubernetes Control Plane processes explained" name="description">
+<title>Kubernetes Control Plane processes explained</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-kubernetes-master-node-processes-explained" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">Kubernetes Control Plane processes explained</h1>
+      <time>2021-08-21</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/kubernetes.html">kubernetes</a>
+    </div>
+
+    <div class="blog-post-body">
+<ul>
+  <li>
+This post assumes you are familiar with Kubernetes components such as pods and nodes.  </li>
+</ul>
+<p>
+Kubernetes Control Plane is the the overseer of your K8s cluster environment. It controllers the cluster state and it’s nodes. The Control Plane has four distinct processes/responsibilities:</p>
+<ol>
+  <li>
+kube-apiserver  </li>
+  <li>
+kube-scheduler  </li>
+  <li>
+kube-controller-manager  </li>
+  <li>
+etcd  </li>
+</ol>
+<h3>
+  kube-apiserver</h3>
+<p>
+This is how users interact with a Kubernetes cluster. When you deploy a cluster or need to make updates you will do so through the kube-apiserver which can be accessed through a command line tool like kubectl or a Kubernetes dashboard. The kube-apiserver can be thought of as the entrypoint/gateway to the cluster.</p>
+<h3>
+  kube-scheduler</h3>
+<p>
+The kube-scheduler processes job is to &lt;b&gt;decide&lt;/b&gt; which node to run a new pod on. This could be a pod that crashed and needs to be restarted or when deploying a new pod to the cluster. An important note is the kube-scheduler process does not actually perform the deployment of the new node, that is handled by the Kubelet process on the individual node that the pod is scheduled to run on, the kube-scheduler only job is to decide which node a pod should run within. It decides where to schedule a pod based on resource utilization of the existing nodes.</p>
+<p>
+Scheduling a new pod flow:
+send a request to the API server -&gt; kube-scheduler decides where the new pod should reside in the node cluster -&gt; kubelet on the node spins up the pod.</p>
+<h3>
+  kube-controller-manager</h3>
+<p>
+This process is monitoring for changes that occur within the cluster environment. If a pod fails and a new one needs to be started in its place the kube-controller-manager will detect it this and notify the kube-scheduler.</p>
+<p>
+Detecting state changes flow:
+A Pod dies -&gt; kube-controller-manager notices this event and notifies the kube-scheduler -&gt; kube-scheduler decides where the new pod should reside in the node cluster -&gt; kubelet on the node spins up the pod.</p>
+<h3>
+  etcd</h3>
+<p>
+This is a Key Value store of a clusters state. Every time a change happens in the cluster the etcd data will be updated appropriately. It contains the data the other processes need to operate. For example:</p>
+<ul>
+  <li>
+The kube-controller-manager is able to monitor changes a K8s cluster through the data contained in etcd.  </li>
+  <li>
+The kube-scheduler will look to etcd to see what node resources are available to determine where a pod should be scheduled.  </li>
+  <li>
+If you need to check the state of a cluster through the kube-apiserver, the server will look to etcd for that data.  </li>
+</ul>
+<p>
+Similar posts:</p>
+<ul>
+  <li>
+<a href="2021-how-to-use-a-secrets-file-for-postgres-credentials-kubernetes.html" target="_blank">How to use a secrets file for postgres credentials using Kubernetes</a>  </li>
+  <li>
+<a href="2021-when-to-use-kubernetes-service-types-configip-loadbalancer-nodeport.html" target="_blank">When to use which service type in Kubernetes</a>  </li>
+  <li>
+<a href="2021-how-to-view-kubernetes-pod-ip-address.html" target="_blank">How to view a Kubernetes pods IP address</a>  </li>
+  <li>
+<a href="2021-how-to-view-the-status-data-of-a-kubernetes-deployment.html" target="_blank">How to view the status data in a Kubernetes Deployment</a>  </li>
+  <li>
+<a href="2021-create-your-first-kubernetes-rails-app-pt1.html" target="_blank">Create your first Rails app cluster with Kubernetes and Docker</a>  </li>
+  <li>
+<a href="2021-kubernetes-kubectl-commands-for-newbies.html" target="_blank">Kubernetes kubectl commands for newbies</a>  </li>
+  <li>
+<a href="2021-kubernetes-worker-node-processes-explained.html" target="_blank">Kubernetes node processes explained</a>  </li>
+  <li>
+<a href="2021-connecting-pods-to-deployments-kubernetes.html" target="_blank">Connecting Kubernetes Deployments to Pods</a>  </li>
+  <li>
+<a href="2021-connecting-services-to-deployments-kubernetes.html" target="_blank">Connecting Kubernetes Services to Deployments</a>  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

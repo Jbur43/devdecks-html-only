@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="awwfLwpDUAYBDQ5gFRd9CCYABkZCfWsm4oWY8062TzAWWFNgs_p6-L2R" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="rails, testing, cheatsheet" name="keywords"><meta content="rails integration testing" name="description">
+<title>Ruby on Rails integration testing cheatsheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2022-rails-integration-testing-cheatsheet" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">Ruby on Rails integration testing cheatsheet</h1>
+      <time>2022-01-01</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/rails.html">rails</a><a class="blog-tag" href="tags/testing.html">testing</a><a class="blog-tag" href="tags/cheatsheet.html">cheatsheet</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+This particular guide uses Mocha for mocks and stubs, Minitest for the test framework, and FactoryBot for the test data. It is a brief summary of tips and examples I put together to help with producing integration tests.</p>
+<h3>
+  Mocks and Stubs using Mocha</h3>
+<p>
+You will notice other testing documentation online referring to various types of “Test doubles” you can use in your tests. These test doubles are replacement objects and behavior for actual objects defined in your application and many of the types build off of each other in terms of capability. Below is an overview of each type in increasing complexity:</p>
+<ol>
+  <li>
+Dummy - This is the simplest form of test double. Used in tests when you just need a generic object, often implemented using <code class="inline">Object.new</code>.  </li>
+  <li>
+Fake - A fake object will largely mimic the applications implementation but will act as a replacement for something like an in-memory database.  </li>
+  <li>
+Stub - Used when you only want to produce a specific return value for an objects method.   </li>
+  <li>
+Spy - Records the number of times an Objects method was called, which can be used in a test expectation. It can also act as a stub and produce explicit return value.  </li>
+  <li>
+Mock - To use a mock object you need to declare how many times you expect a method to be invoked in advance and then verifies whether the expected number matches the actual number of invocations. It is the only type of double that enforces behavior verification. It can also act as a stub and produce explicit return value.   </li>
+</ol>
+<p>
+The Mocha library is used to implement two types of test doubles, stubs and mocks.</p>
+<p>
+Below is an example mock from the <a href="https://github.com/freerange/mocha" target="_blank">Mocha documentation</a>. You can tell that it is a mock because it sets up an expectation before the additional <code class="inline">assert_equal</code> assertion by calling <code class="inline">Product.expects(:find)</code>, now the test will fail unless the find method is called on an instance of Product. It also implements stub behavior because we are returning an explicit product from a call to the method.</p>
+<pre><code>def test_mocking_a_class_method
+  product = Product.new
+  Product.expects(:find).with(1).returns(product)
+  assert_equal product, Product.find(1)
+end</code></pre>
+<p>
+Below is an example stub from the <a href="https://github.com/freerange/mocha" target="_blank">Mocha documentation</a>. You can tell it is a stub because it is not setting up any expectation around the number of times the stubbed method (in this case <code class="inline">:prices</code>) is invoked and it is returning an explicit object from a call to the stub.</p>
+<pre><code>def test_stubbing_instance_methods_on_real_objects
+  prices = [stub(:pence =&gt; 1000), stub(:pence =&gt; 2000)]
+  product = Product.new
+  product.stubs(:prices).returns(prices)
+  assert_equal [1000, 2000], product.prices.collect {|p| p.pence}
+end</code></pre>
+<p>
+Tip: If you are incurring the failure “expected to be called exactly once but was invoked 3 times” and you don’t need to be explicit about the number of invocations for your tests accuracy try using the <code class="inline">.any_instance</code> method provided by mocha before setting the stub. In practice that looks like:</p>
+<pre><code>account = Account.new
+
+Session.any_instance
+.stubs(:account)
+.returns(account)</code></pre>
+<p>
+Tip: If you are working with JavaScript and want an example on working with Jest <a href="2021-jest-testing-cheatsheet.html" target="_blank">tests</a> and <a href="2021-mock-custom-react-hooks-with-jest.html" target="_blank">mocks</a> I wrote previous on that <a href="2021-jest-testing-cheatsheet.html" target="_blank">here</a> and <a href="2021-mock-custom-react-hooks-with-jest.html" target="_blank">here</a></p>
+<h3>
+  Making async controller requests</h3>
+<p>
+Tip: You can indicate that an HTTP request should be made asynchronously using the option <code class="inline">xhr: true</code></p>
+<pre><code>get &quot;/application/integrations&quot;, xhr: true</code></pre>
+<h3>
+  Setting session data for integration tests</h3>
+<p>
+When I was first looking into integration testing I thought there might be a way for me to pass session data I needed as an argument to an HTTP GET request, like this:</p>
+<pre><code>get url, params: {}, session: {}</code></pre>
+<p>
+Unfortunately it is not that easy and simultaneously defeats the purpose of an integration test. Integration testing an endpoint in your Rails application means that whatever action sets that session data needs to take place within the test itself, so if the route requires a user to be logged into the application first, then the integration test should start off by logging in the user and then proceed to your specific endpoint.</p>
+<pre><code>it &quot;gets reports&quot; do
+  post(
+    &quot;https://myapp.com/user/session&quot;,
+    params: {token: user.tokens.create()}
+  )
+  get &quot;https://myapp.com/user/reports&quot;, xhr: true
+
+  assert_response 200
+end</code></pre>
+<p>
+You may hear developers refer to bad tests that “aren’t really testing anything” even though the tests pass and the code coverage increases. This will happen when interactions that should be tested are bypassed, like I was looking to do with passing session data to the controller explicitly. This will often manifest itself in the form of excess stubs.</p>
+<h3>
+  Working with database transactions</h3>
+<p>
+If you’re using FactoryBot in your test suite configuration you should be using it to persist the data you need for your integration tests before the test is run. What follows is an example of defining a factory and then using it within a test file. The Factories must exist as data models within your application.</p>
+<p>
+This factory defines a report object and two data attributes with default values <code class="inline">job_type</code> and <code class="inline">active</code>. </p>
+<pre><code class="ruby">FactoryBot.define do
+ factory :report do
+   job_type{ &quot;recurring&quot; }
+   active{ true }
+ end
+end</code></pre>
+<p>
+In the test implementation call the <code class="inline">.create</code> method with the name of the factory you want to persist and optionally and data you want to override default values for. Another popular FactorBot method is <code class="inline">.build</code> which is called the same way as <code class="inline">.create</code> but instead of persisting the object it is just an object in memory.</p>
+<pre><code class="ruby">require &quot;test_helper&quot;
+
+ class Api::ReportsControllerTest &lt; ActionDispatch::IntegrationTest
+ 
+ before do
+   10.times{
+     create(:report, active: false)
+   }
+ end
+
+ it &quot;gets reports&quot; do
+   post(
+     &quot;https://myapp.com/user/session&quot;,
+     params: {token: user.tokens.create()}
+   )
+   get &quot;https://myapp.com/user/reports&quot;, xhr: true
+   assert_response 200
+ end
+end</code></pre>
+<h3>
+  Making requests external to your application</h3>
+<p>
+These can be microservices within your system or third party API’s that you interact with, in either event they should be stubbed and given an expected return value if relevant. The reason here is that your integration tests’ success is independent of those external systems being up or down. You don’t want to try and push an urgent bug fix to production and then get stuck because your integration test is failing in your build pipeline at no fault of your own. There is also the danger of your test suite becoming too slow as your test suite gets larger or you unintentionally create bad data during the tests. </p>
+<p>
+To stub HTTP calls you can either stub the method that issues the HTTP request or you can use a ruby HTTP stubbing library like <a href="https://github.com/bblimke/webmock" target="_blank">WebMock</a>.</p>
+<p>
+Stubbing HTTP calls behaves the same as stubbing Object methods only instead of stubbing a method on an object you stub the URL, http method, headers, and parameters and optionally can ask for a specific return:</p>
+<p>
+From the webmock docs:</p>
+<pre><code class="ruby">stub_request(:post, &quot;www.example.com&quot;).
+  with(body: /world$/, headers: {&quot;Content-Type&quot; =&gt; /image\/.+/}).
+  to_return(body: &quot;abc&quot;)</code></pre>
+<p>
+Tip: For the stub to work the URL has to match exactly so make sure your query parameters and url path variables match exactly or the stub will not be set properly.</p>
+<p>
+Similar posts:</p>
+<ul>
+  <li>
+<a href="2021-same-db-table-parent-child-relationship-rails.html" target="_blank">Same Database table parent/child relationship using Rails</a>  </li>
+  <li>
+<a href="2021-rails-nested-resources-mvc-complete-example.html" target="_blank">Rails nested resources completed example</a>  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

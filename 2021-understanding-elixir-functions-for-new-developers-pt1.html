@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="V0ADIANFEGQxFHkvVgsCPkAZICU-KmAe3ueUBrQ2Zg7VbCU_s_RlfhSl" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="elixir, deck, elixir-deck" name="keywords"><meta content="elixir functions explained for new devs" name="description">
+<title>Understanding Elixir Functions for new developers part 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-understanding-elixir-functions-for-new-developers-pt1" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">Understanding Elixir Functions for new developers part 1</h1>
+      <time>2021-09-01</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/elixir.html">elixir</a><a class="blog-tag" href="tags/deck.html">deck</a><a class="blog-tag" href="tags/elixir-deck.html">elixir-deck</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+This and the other “Deck” posts are a repurposing of flashcard study decks to Q&amp;A blog posts. Google was not showing love to this content as a set of flashcards and I didn’t want to delete them entirely, I hope you find it useful.</p>
+<h3>
+  What does it mean to say "Functions are first class citizens." in Elixir?</h3>
+<p>
+Functions are a foundational data type in Elixir and can be assigned to a variable. Which is not the case in other languages, for example, Ruby where functions exist as methods on objects.</p>
+<h3>
+  What are some benefits of using a programming language with functions as first class citizens?</h3>
+<ol>
+  <li>
+You can pass functions as arguments to other functions.   </li>
+  <li>
+You can return functions from other functions.   </li>
+  <li>
+Functions can be stored in other data structures like Maps and Lists.  </li>
+</ol>
+<h3>
+  How do modules relate to functions in Elixir?</h3>
+<p>
+Modules are used as the way to group functions to a business/entity context of our application. In the example below <code class="inline">Account</code> is our module/business context and the functions are defined inside of it: </p>
+<pre><code>defmodule Account do 
+  def get_details(id) do 
+  end 
+
+  def some_other_function_related_to_account do 
+  end 
+end </code></pre>
+<h3>
+  Are functions always defined within a module?</h3>
+<p>
+Named functions are, but anonymous functions do not have to be.</p>
+<h3>
+  What are the different ways to define a function in Elixir?</h3>
+<p>
+You can define them within a module as named functions: </p>
+<pre><code>defmodule Account do 
+  def get_details(id) do 
+  end 
+end</code></pre>
+<p>
+Or as an anonymous function, which there are two ways to define: </p>
+<pre><code>subtract = fn (a, b) -&gt; a - b end</code></pre>
+<pre><code>subtract = &amp;(&amp;1 - &amp;2)</code></pre>
+<h3>
+  Write the code for how you would invoke the functions mentioned in the previous question.</h3>
+<pre><code>defmodule Account do 
+  def get_details(id) do 
+  end 
+end</code></pre>
+<pre><code>subtract = fn (a, b) -&gt; a - b end</code></pre>
+<pre><code>subtract = &amp;(&amp;1 - &amp;2)</code></pre>
+<pre><code>subtract.(2,1)</code></pre>
+<pre><code>Account.get_details(&quot;agf23EDf4weDre5r&quot;)</code></pre>
+<h3>
+  Why must named functions be defined within a module?</h3>
+<p>
+By grouping functions within a module we keep the global namespace of our programs cleaner and make our programs easier to reason about. If we didn’t have named functions scoped in modules we could quickly run into an issue where we defined the same named function later on in our project which change s the behavior of the initial implementation entirely.</p>
+<h3>
+  When are anonymous functions most used?</h3>
+<p>
+As callback functions aka arguments to other functions. <code class="inline">Enum.map</code> is a good example: </p>
+<pre><code>Enum.map(fn(num) -&gt; num * 3 end)</code></pre>
+<h3>
+  What is the difference between the def and the defp statements when defining named functions?</h3>
+<p>
+<code class="inline">defp</code> indicates that the function is private to the module it is defined in and can only be invoked by the other functions in that module. <code class="inline">def</code> functions can be invoked from other modules and the module it is defined in.</p>
+<h3>
+  What is the syntax for setting a default parameter to a function?</h3>
+<p>
+<code class="inline">\\</code>. In the function below if params are not provided, the params variable will be set to an empty Map. </p>
+<pre><code>def create(params \\ %{}) do 
+  %DevDecks.User{} |&gt; cast(params, [:email, :name]) |&gt; Repo.insert() 
+end</code></pre>
+<p>
+<a href="tags/elixir-deck.html" target="_blank">More Elixir lang decks</a></p>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

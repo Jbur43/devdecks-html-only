@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="PgM1GV8GAwM7VXg4RmZTRDYGJjtlByIXF4ta4wjoZ13gw-d1WieBULjQ" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="nimblepublisher, elixir, pagination" name="keywords"><meta content="How to implement pagination using Elixirs Nimblepublisher" name="description">
+<title>How to paginate an in memory array</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2022-in-memory-pagination-by-example" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">How to paginate an in memory array</h1>
+      <time>2022-03-29</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/nimblepublisher.html">nimblepublisher</a><a class="blog-tag" href="tags/elixir.html">elixir</a><a class="blog-tag" href="tags/pagination.html">pagination</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+This is an example of how you can implement in memory pagination using Elixir and NimblePublisher. If you are unfamiliar with NimblePublisher you can check out this <a href="https://dashbit.co/blog/welcome-to-our-blog-how-it-was-made" target="_blank">blog post</a> from Jose Valim and Dashbit.</p>
+<p>
+First I want to address that there are many different methods for handling pagination in an application, but what I wanted to do was paginate an in memory array, or List, in Elixir. This is a list of blog posts gets compiled with my Elixir application on startup. </p>
+<p>
+The end goal here was to be able to render 10 posts per page with the first ten showing on the homepage of this website and every subsequent ten posts being displayed at <a href="page/2,.html">https://www.devdecks.io/page/2,</a> <a href="page/3,.html">https://www.devdecks.io/page/3,</a> etc.</p>
+<p>
+To handle this you first need to define two routes in your <code class="inline">router.ex</code> file. You only need to define two routes if you want the same setup I have (homepage and /page), you could also just have a single route for <code class="inline">/page/:count</code>.</p>
+<pre><code class="makeup elixir"><span class="n">get</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="nc">BlogController</span><span class="p">,</span><span class="w"> </span><span class="ss">:index</span><span class="w">
+</span><span class="n">get</span><span class="w"> </span><span class="s">&quot;/page/:count&quot;</span><span class="p">,</span><span class="w"> </span><span class="nc">BlogController</span><span class="p">,</span><span class="w"> </span><span class="ss">:paginate</span></code></pre>
+<p>
+Below is the code for accessing the list of blog posts. This code injects the NimblePublisher macro into the module which creates the <code class="inline">@posts</code> variable and then the posts are sorted by date and filtered for published posts, from there it sets the data for <code class="inline">@tags</code> and defines two getter methods for that data.</p>
+<pre><code class="makeup elixir"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">DevDecks.Blog</span><span class="w"> </span><span class="k" data-group-id="5898770691-1">do</span><span class="w">
+  </span><span class="kn">alias</span><span class="w"> </span><span class="nc">DevDecks.Blog.Post</span><span class="w">
+
+  </span><span class="kn">use</span><span class="w"> </span><span class="nc">NimblePublisher</span><span class="p">,</span><span class="w">
+    </span><span class="ss">build</span><span class="p">:</span><span class="w"> </span><span class="nc">Post</span><span class="p">,</span><span class="w">
+    </span><span class="ss">from</span><span class="p">:</span><span class="w"> </span><span class="nc">Application</span><span class="o">.</span><span class="n">app_dir</span><span class="p" data-group-id="5898770691-2">(</span><span class="ss">:dev_decks</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;priv/posts/**/*.md&quot;</span><span class="p" data-group-id="5898770691-2">)</span><span class="p">,</span><span class="w">
+    </span><span class="ss">as</span><span class="p">:</span><span class="w"> </span><span class="ss">:posts</span><span class="p">,</span><span class="w">
+    </span><span class="ss">highlighters</span><span class="p">:</span><span class="w"> </span><span class="p" data-group-id="5898770691-3">[</span><span class="ss">:makeup_elixir</span><span class="p">,</span><span class="w"> </span><span class="ss">:makeup_erlang</span><span class="p" data-group-id="5898770691-3">]</span><span class="w">
+
+  </span><span class="na">@posts</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">sort_by</span><span class="p" data-group-id="5898770691-4">(</span><span class="na">@posts</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="ni">&amp;1</span><span class="o">.</span><span class="n">date</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="5898770691-5">{</span><span class="ss">:desc</span><span class="p">,</span><span class="w"> </span><span class="nc">Date</span><span class="p" data-group-id="5898770691-5">}</span><span class="p" data-group-id="5898770691-4">)</span><span class="w">
+  </span><span class="na">@published_posts</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">filter</span><span class="p" data-group-id="5898770691-6">(</span><span class="na">@posts</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="5898770691-7">fn</span><span class="w"> </span><span class="p" data-group-id="5898770691-8">(</span><span class="n">p</span><span class="p" data-group-id="5898770691-8">)</span><span class="o">-&gt;</span><span class="w"> </span><span class="n">p</span><span class="o">.</span><span class="n">published</span><span class="w"> </span><span class="k" data-group-id="5898770691-7">end</span><span class="p" data-group-id="5898770691-6">)</span><span class="w">
+  </span><span class="na">@tags</span><span class="w"> </span><span class="na">@published_posts</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">flat_map</span><span class="p" data-group-id="5898770691-9">(</span><span class="o">&amp;</span><span class="w"> </span><span class="ni">&amp;1</span><span class="o">.</span><span class="n">tags</span><span class="p" data-group-id="5898770691-9">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">uniq</span><span class="p" data-group-id="5898770691-10">(</span><span class="p" data-group-id="5898770691-10">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">sort</span><span class="p" data-group-id="5898770691-11">(</span><span class="p" data-group-id="5898770691-11">)</span><span class="w">
+
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">all_posts</span><span class="p">,</span><span class="w"> </span><span class="ss">do</span><span class="p">:</span><span class="w"> </span><span class="na">@published_posts</span><span class="w">
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">all_tags</span><span class="p">,</span><span class="w"> </span><span class="ss">do</span><span class="p">:</span><span class="w"> </span><span class="na">@tags</span><span class="w">
+</span><span class="k" data-group-id="5898770691-1">end</span></code></pre>
+<p>
+Then in the controller define the two functions referenced in our router code, one for handling <code class="inline">index</code> requests and one for handling <code class="inline">paginate</code> requests.</p>
+<p>
+The <code class="inline">index</code> action will only need to worry about setting state for <code class="inline">has_next_page</code> to see if a next page is available, <code class="inline">next_page_link</code>, which holds the next link for pagination and <code class="inline">posts</code> for paginated blog posts. The <code class="inline">paginate</code> action will declare an extra state value for <code class="inline">previous_page_link</code> to handle previous page navigation. The code for the <code class="inline">Blog</code> methods will be covered later.</p>
+<pre><code class="makeup elixir"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">DevDecksWeb.BlogController</span><span class="w"> </span><span class="k" data-group-id="8444137419-1">do</span><span class="w">
+  </span><span class="kn">alias</span><span class="w"> </span><span class="nc">DevDecksWeb.Router.Helpers</span><span class="p">,</span><span class="w"> </span><span class="ss">as</span><span class="p">:</span><span class="w"> </span><span class="nc">Routes</span><span class="w">
+  </span><span class="kn">use</span><span class="w"> </span><span class="nc">DevDecksWeb</span><span class="p">,</span><span class="w"> </span><span class="ss">:controller</span><span class="w">
+  </span><span class="kn">alias</span><span class="w"> </span><span class="nc">DevDecks.Blog</span><span class="w">
+
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">index</span><span class="p" data-group-id="8444137419-2">(</span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="c">_p</span><span class="p" data-group-id="8444137419-2">)</span><span class="w"> </span><span class="k" data-group-id="8444137419-3">do</span><span class="w">
+    </span><span class="n">page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="n">next_page_link</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/page/</span><span class="si" data-group-id="8444137419-4">#{</span><span class="n">page</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si" data-group-id="8444137419-4">}</span><span class="s">&quot;</span><span class="w">
+
+    </span><span class="n">render</span><span class="p" data-group-id="8444137419-5">(</span><span class="w">
+      </span><span class="n">conn</span><span class="p">,</span><span class="w">
+      </span><span class="s">&quot;index.html&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="ss">posts</span><span class="p">:</span><span class="w"> </span><span class="nc">Blog</span><span class="o">.</span><span class="n">paginated_posts</span><span class="p" data-group-id="8444137419-6">(</span><span class="n">page</span><span class="p" data-group-id="8444137419-6">)</span><span class="p">,</span><span class="w">
+      </span><span class="ss">has_next_page</span><span class="p">:</span><span class="w"> </span><span class="nc">Blog</span><span class="o">.</span><span class="n">has_next_page</span><span class="p" data-group-id="8444137419-7">(</span><span class="n">page</span><span class="p" data-group-id="8444137419-7">)</span><span class="p">,</span><span class="w">
+      </span><span class="ss">next_page_link</span><span class="p">:</span><span class="w"> </span><span class="n">next_page_link</span><span class="w">
+    </span><span class="p" data-group-id="8444137419-5">)</span><span class="w">
+  </span><span class="k" data-group-id="8444137419-3">end</span><span class="w">
+
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">paginate</span><span class="p" data-group-id="8444137419-8">(</span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="8444137419-9">%{</span><span class="s">&quot;count&quot;</span><span class="w"> </span><span class="o">=</span><span class="o">&gt;</span><span class="w"> </span><span class="n">count</span><span class="p" data-group-id="8444137419-9">}</span><span class="p" data-group-id="8444137419-8">)</span><span class="w"> </span><span class="k" data-group-id="8444137419-10">do</span><span class="w">
+    </span><span class="p" data-group-id="8444137419-11">{</span><span class="n">count</span><span class="p">,</span><span class="w"> </span><span class="bp">_</span><span class="p" data-group-id="8444137419-11">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Integer</span><span class="o">.</span><span class="n">parse</span><span class="p" data-group-id="8444137419-12">(</span><span class="n">count</span><span class="p" data-group-id="8444137419-12">)</span><span class="w">
+    </span><span class="n">next_page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="n">previous_page</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="n">next_page_link</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">next_page</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;/page/</span><span class="si" data-group-id="8444137419-13">#{</span><span class="n">next_page</span><span class="si" data-group-id="8444137419-13">}</span><span class="s">&quot;</span><span class="w">
+    </span><span class="n">previous_page_link</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">previous_page</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;/page/</span><span class="si" data-group-id="8444137419-14">#{</span><span class="n">previous_page</span><span class="si" data-group-id="8444137419-14">}</span><span class="s">&quot;</span><span class="w">
+
+    </span><span class="n">render</span><span class="p" data-group-id="8444137419-15">(</span><span class="w">
+      </span><span class="n">conn</span><span class="p">,</span><span class="w">
+      </span><span class="s">&quot;paginate.html&quot;</span><span class="p">,</span><span class="w">
+      </span><span class="ss">posts</span><span class="p">:</span><span class="w"> </span><span class="nc">Blog</span><span class="o">.</span><span class="n">paginated_posts</span><span class="p" data-group-id="8444137419-16">(</span><span class="n">count</span><span class="p" data-group-id="8444137419-16">)</span><span class="p">,</span><span class="w">
+      </span><span class="ss">next_page</span><span class="p">:</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="ss">next_page_link</span><span class="p">:</span><span class="w"> </span><span class="n">next_page_link</span><span class="p">,</span><span class="w">
+      </span><span class="ss">previous_page_link</span><span class="p">:</span><span class="w"> </span><span class="n">previous_page_link</span><span class="p">,</span><span class="w">
+    </span><span class="p" data-group-id="8444137419-15">)</span><span class="w">
+  </span><span class="k" data-group-id="8444137419-10">end</span><span class="w">
+</span><span class="k" data-group-id="8444137419-1">end</span></code></pre>
+<p>
+In the previously referenced <code class="inline">Blog</code> application context is where the behavior for the pagination functionality will live. The <code class="inline">paginated_posts</code> function below creates a range of a count up to 9, which will give us 10 items if using a starting point of 0, eg. <code class="inline">0..9</code>. The function then filters the NimblePublisher <code class="inline">@published_posts</code> using the index of each post and the <code class="inline">start..stop</code> range, if a post exists at the index, it will be included in the paginated page.</p>
+<p>
+The <code class="inline">has_next_page</code> function takes the current page value and checks to see if there are any more posts in the collection at then next index value.</p>
+<pre><code class="makeup elixir"><span class="w">  </span><span class="kd">def</span><span class="w"> </span><span class="nf">paginated_posts</span><span class="p" data-group-id="2408294939-1">(</span><span class="n">page</span><span class="p" data-group-id="2408294939-1">)</span><span class="w"> </span><span class="k" data-group-id="2408294939-2">do</span><span class="w">
+    </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="2408294939-3">(</span><span class="n">page</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="p" data-group-id="2408294939-3">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="n">stop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">9</span><span class="w">
+
+    </span><span class="na">@published_posts</span><span class="w">
+    </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">with_index</span><span class="w">
+    </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">filter</span><span class="p" data-group-id="2408294939-4">(</span><span class="k" data-group-id="2408294939-5">fn</span><span class="p" data-group-id="2408294939-6">(</span><span class="p" data-group-id="2408294939-7">{</span><span class="bp">_</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p" data-group-id="2408294939-7">}</span><span class="p" data-group-id="2408294939-6">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+      </span><span class="nc">Enum</span><span class="o">.</span><span class="n">member?</span><span class="p" data-group-id="2408294939-8">(</span><span class="n">start</span><span class="o">.</span><span class="o">.</span><span class="n">stop</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p" data-group-id="2408294939-8">)</span><span class="w">
+    </span><span class="k" data-group-id="2408294939-5">end</span><span class="p" data-group-id="2408294939-4">)</span><span class="w">
+    </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="2408294939-9">(</span><span class="k" data-group-id="2408294939-10">fn</span><span class="p" data-group-id="2408294939-11">(</span><span class="n">tuple</span><span class="p" data-group-id="2408294939-11">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+      </span><span class="n">elem</span><span class="p" data-group-id="2408294939-12">(</span><span class="n">tuple</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="2408294939-12">)</span><span class="w">
+    </span><span class="k" data-group-id="2408294939-10">end</span><span class="p" data-group-id="2408294939-9">)</span><span class="w">
+  </span><span class="k" data-group-id="2408294939-2">end</span><span class="w">
+
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">has_next_page</span><span class="p" data-group-id="2408294939-13">(</span><span class="n">page</span><span class="p" data-group-id="2408294939-13">)</span><span class="w"> </span><span class="k" data-group-id="2408294939-14">do</span><span class="w">
+    </span><span class="n">first_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p" data-group-id="2408294939-15">(</span><span class="n">page</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">10</span><span class="p" data-group-id="2408294939-15">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="w">
+
+    </span><span class="k">cond</span><span class="w"> </span><span class="k" data-group-id="2408294939-16">do</span><span class="w">
+      </span><span class="nc">Enum</span><span class="o">.</span><span class="n">at</span><span class="p" data-group-id="2408294939-17">(</span><span class="na">@published_posts</span><span class="p">,</span><span class="w"> </span><span class="n">first_index</span><span class="p" data-group-id="2408294939-17">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="no">true</span><span class="w">
+      </span><span class="no">true</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="no">false</span><span class="w">
+    </span><span class="k" data-group-id="2408294939-16">end</span><span class="w">
+  </span><span class="k" data-group-id="2408294939-14">end</span></code></pre>
+<p>
+Then in the html template make use of the state delcared in the controllers by rendering the posts using an elixir comprehension and render a link for the next page if relevant.</p>
+<p>
+Index page:</p>
+<pre><code class="makeup elixir"><span class="w">  </span><span class="o">&lt;</span><span class="p">%</span><span class="o">=</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">post</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="na">@posts</span><span class="w"> </span><span class="k" data-group-id="0345706918-1">do</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="w">
+    </span><span class="o">&lt;</span><span class="n">div</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="s">&quot;&lt;%= post.id %&gt;&quot;</span><span class="w"> </span><span class="n">style</span><span class="o">=</span><span class="s">&quot;margin-bottom: 1.5rem;&quot;</span><span class="o">&gt;</span><span class="w">
+      </span><span class="o">&lt;</span><span class="n">div</span><span class="w"> </span><span class="n">class</span><span class="o">=</span><span class="s">&quot;flex-row-d-column-m&quot;</span><span class="o">&gt;</span><span class="w">
+        </span><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="w">
+          </span><span class="o">&lt;</span><span class="p">%</span><span class="o">=</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="n">post</span><span class="o">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">Routes</span><span class="o">.</span><span class="n">blog_path</span><span class="p" data-group-id="0345706918-2">(</span><span class="na">@conn</span><span class="p">,</span><span class="w"> </span><span class="ss">:show</span><span class="p">,</span><span class="w"> </span><span class="n">post</span><span class="p" data-group-id="0345706918-2">)</span><span class="p">,</span><span class="w"> </span><span class="ss">class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;blog-title&quot;</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="w">
+        </span><span class="o">&lt;</span><span class="o">/</span><span class="n">h2</span><span class="o">&gt;</span><span class="w">
+        </span><span class="o">&lt;</span><span class="n">time</span><span class="o">&gt;</span><span class="o">&lt;</span><span class="p">%</span><span class="o">=</span><span class="w"> </span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="o">&lt;</span><span class="o">/</span><span class="n">time</span><span class="o">&gt;</span><span class="w">
+      </span><span class="o">&lt;</span><span class="o">/</span><span class="n">div</span><span class="o">&gt;</span><span class="w">
+
+      </span><span class="o">&lt;</span><span class="n">div</span><span class="w"> </span><span class="n">class</span><span class="o">=</span><span class="s">&quot;flex-row-no-space&quot;</span><span class="o">&gt;</span><span class="w">
+        </span><span class="o">&lt;</span><span class="n">img</span><span class="w"> </span><span class="n">class</span><span class="o">=</span><span class="s">&quot;icon-sm&quot;</span><span class="w"> </span><span class="n">src</span><span class="o">=</span><span class="s">&quot;&lt;%= Routes.static_path(DevDecksWeb.Endpoint, &quot;</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">tag</span><span class="o">.</span><span class="n">svg</span><span class="s">&quot;) %&gt;&quot;</span><span class="w"> </span><span class="o">/</span><span class="o">&gt;</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="o">&lt;</span><span class="p">%</span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="0345706918-3">(</span><span class="n">post</span><span class="o">.</span><span class="n">tags</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="0345706918-4">fn</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">link</span><span class="p" data-group-id="0345706918-5">(</span><span class="s">&quot;</span><span class="si" data-group-id="0345706918-6">#{</span><span class="n">t</span><span class="si" data-group-id="0345706918-6">}</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/tags/</span><span class="si" data-group-id="0345706918-7">#{</span><span class="n">t</span><span class="si" data-group-id="0345706918-7">}</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;blog-tag&quot;</span><span class="p" data-group-id="0345706918-5">)</span><span class="w"> </span><span class="k" data-group-id="0345706918-4">end</span><span class="p" data-group-id="0345706918-3">)</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="w">
+      </span><span class="o">&lt;</span><span class="o">/</span><span class="n">div</span><span class="o">&gt;</span><span class="w">
+    </span><span class="o">&lt;</span><span class="o">/</span><span class="n">div</span><span class="o">&gt;</span><span class="w">
+  </span><span class="o">&lt;</span><span class="p">%</span><span class="w"> </span><span class="k" data-group-id="0345706918-1">end</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="w">
+  </span><span class="o">&lt;</span><span class="p">%</span><span class="o">=</span><span class="w"> </span><span class="n">link</span><span class="p" data-group-id="0345706918-8">(</span><span class="s">&quot;More Blog&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="na">@next_page_link</span><span class="p" data-group-id="0345706918-8">)</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span></code></pre>
+<p>
+Paginate page:</p>
+<pre><code class="makeup elixir"><span class="w"> </span><span class="o">&lt;</span><span class="p">%</span><span class="o">=</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">post</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="na">@posts</span><span class="w"> </span><span class="k" data-group-id="8070198728-1">do</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="w">
+    </span><span class="o">&lt;</span><span class="n">div</span><span class="w"> </span><span class="n">id</span><span class="o">=</span><span class="s">&quot;&lt;%= post.id %&gt;&quot;</span><span class="w"> </span><span class="n">style</span><span class="o">=</span><span class="s">&quot;margin-bottom: 1.5rem;&quot;</span><span class="o">&gt;</span><span class="w">
+      </span><span class="o">&lt;</span><span class="n">div</span><span class="w"> </span><span class="n">class</span><span class="o">=</span><span class="s">&quot;flex-row-d-column-m&quot;</span><span class="o">&gt;</span><span class="w">
+        </span><span class="o">&lt;</span><span class="n">h2</span><span class="o">&gt;</span><span class="w">
+          </span><span class="o">&lt;</span><span class="p">%</span><span class="o">=</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="n">post</span><span class="o">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="nc">Routes</span><span class="o">.</span><span class="n">blog_path</span><span class="p" data-group-id="8070198728-2">(</span><span class="na">@conn</span><span class="p">,</span><span class="w"> </span><span class="ss">:show</span><span class="p">,</span><span class="w"> </span><span class="n">post</span><span class="p" data-group-id="8070198728-2">)</span><span class="p">,</span><span class="w"> </span><span class="ss">class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;blog-title&quot;</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="w">
+        </span><span class="o">&lt;</span><span class="o">/</span><span class="n">h2</span><span class="o">&gt;</span><span class="w">
+        </span><span class="o">&lt;</span><span class="n">time</span><span class="o">&gt;</span><span class="o">&lt;</span><span class="p">%</span><span class="o">=</span><span class="w"> </span><span class="n">post</span><span class="o">.</span><span class="n">date</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="o">&lt;</span><span class="o">/</span><span class="n">time</span><span class="o">&gt;</span><span class="w">
+      </span><span class="o">&lt;</span><span class="o">/</span><span class="n">div</span><span class="o">&gt;</span><span class="w">
+
+      </span><span class="o">&lt;</span><span class="n">div</span><span class="w"> </span><span class="n">class</span><span class="o">=</span><span class="s">&quot;flex-row-no-space&quot;</span><span class="o">&gt;</span><span class="w">
+        </span><span class="o">&lt;</span><span class="n">img</span><span class="w"> </span><span class="n">class</span><span class="o">=</span><span class="s">&quot;icon-sm&quot;</span><span class="w"> </span><span class="n">src</span><span class="o">=</span><span class="s">&quot;&lt;%= Routes.static_path(DevDecksWeb.Endpoint, &quot;</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">tag</span><span class="o">.</span><span class="n">svg</span><span class="s">&quot;) %&gt;&quot;</span><span class="w"> </span><span class="o">/</span><span class="o">&gt;</span><span class="o">&amp;</span><span class="n">nbsp</span><span class="o">&lt;</span><span class="p">%</span><span class="o">=</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="8070198728-3">(</span><span class="n">post</span><span class="o">.</span><span class="n">tags</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="8070198728-4">fn</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">link</span><span class="p" data-group-id="8070198728-5">(</span><span class="s">&quot;</span><span class="si" data-group-id="8070198728-6">#{</span><span class="n">t</span><span class="si" data-group-id="8070198728-6">}</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/tags/</span><span class="si" data-group-id="8070198728-7">#{</span><span class="n">t</span><span class="si" data-group-id="8070198728-7">}</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">class</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;blog-tag&quot;</span><span class="p" data-group-id="8070198728-5">)</span><span class="w"> </span><span class="k" data-group-id="8070198728-4">end</span><span class="p" data-group-id="8070198728-3">)</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="w">
+      </span><span class="o">&lt;</span><span class="o">/</span><span class="n">div</span><span class="o">&gt;</span><span class="w">
+    </span><span class="o">&lt;</span><span class="o">/</span><span class="n">div</span><span class="o">&gt;</span><span class="w">
+  </span><span class="o">&lt;</span><span class="p">%</span><span class="w"> </span><span class="k" data-group-id="8070198728-1">end</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="w">
+
+
+  </span><span class="o">&lt;</span><span class="p">%</span><span class="o">=</span><span class="w"> </span><span class="n">link</span><span class="p" data-group-id="8070198728-8">(</span><span class="s">&quot;Less Blog&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="na">@previous_page_link</span><span class="p" data-group-id="8070198728-8">)</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="w">
+  </span><span class="o">&amp;</span><span class="n">nbsp</span><span class="w">
+  </span><span class="o">&amp;</span><span class="n">nbsp</span><span class="w">
+  </span><span class="o">&lt;</span><span class="p">%</span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">length</span><span class="p" data-group-id="8070198728-9">(</span><span class="na">@posts</span><span class="p" data-group-id="8070198728-9">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="k" data-group-id="8070198728-10">do</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="w">
+  </span><span class="o">&lt;</span><span class="p">%</span><span class="w"> </span><span class="k" data-group-id="8070198728-10">else</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="w">
+    </span><span class="o">&lt;</span><span class="p">%</span><span class="o">=</span><span class="w"> </span><span class="n">link</span><span class="p" data-group-id="8070198728-11">(</span><span class="s">&quot;More Blog&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">to</span><span class="p">:</span><span class="w"> </span><span class="na">@next_page_link</span><span class="p" data-group-id="8070198728-11">)</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span><span class="w">
+  </span><span class="o">&lt;</span><span class="p">%</span><span class="w"> </span><span class="k" data-group-id="8070198728-10">end</span><span class="w"> </span><span class="p">%</span><span class="o">&gt;</span></code></pre>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

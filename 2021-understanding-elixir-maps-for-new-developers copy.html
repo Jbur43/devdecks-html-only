@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="IiEGMVgzXScDWCUsADIjPH4xUwIAAwYSmyQxudmI0aNg7qSh6_0IUauU" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="elixir, deck, elixir-deck" name="keywords"><meta content="elixir maps explained for new devs" name="description">
+<title>Understanding Elixir Maps for new developers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-understanding-elixir-maps-for-new-developers copy" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">Understanding Elixir Maps for new developers</h1>
+      <time>2021-08-31</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/elixir.html">elixir</a><a class="blog-tag" href="tags/deck.html">deck</a><a class="blog-tag" href="tags/elixir-deck.html">elixir-deck</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+This and the other “Deck” posts are a repurposing of flashcard study decks to Q&amp;A blog posts. Google was not showing love to this content as a set of flashcards and I didn’t want to delete them entirely, I hope you find it useful.</p>
+<h3>
+  What is an Elixir Map?</h3>
+<p>
+They are the most often used key/value store data type in Elixir.</p>
+<h3>
+  What is a Map used for?</h3>
+<p>
+Maps are used to associate data elements with meaningful keys and the data associated with that key can be retrieved or updated using its key.</p>
+<h3>
+  What are different ways to add a new value to a Map?</h3>
+<p>
+Using the Map module: </p>
+<pre><code>Map.put(%{name: &quot;Humphry Dobs&quot;, email: &quot;thedobinator@emailsalot.com&quot;}, :age, 24)</code></pre>
+<p>
+Or Using the Kernel module: </p>
+<pre><code>put_in %{name: &quot;Humphry Dobs&quot;, email: &quot;thedobinator@emailsalot.com&quot;}[:age], 24</code></pre>
+<h3>
+  Does Elixir contain an operator for updating a keys value?</h3>
+<p>
+Yes, the operator is <code class="inline">|</code>, but key has to exist, otherwise the code will error. The first example below updates the value for key <code class="inline">one:</code>, the second example tries to update the value for key <code class="inline">three:</code>, which doesn’t exist so a <code class="inline">KeyError</code> is thrown. </p>
+<pre><code>=&gt;map = %{one: 1, two: 2} 
+=&gt; %{map | one: &quot;one&quot;} 
+%{one: &quot;one&quot;, two: 2}</code></pre>
+<pre><code>=&gt; map = %{one: 1, two: 2}
+=&gt; %{map | three: 3} 
+(KeyError)</code></pre>
+<h3>
+  How can you read a value from a Map without pattern matching?</h3>
+<p>
+Through access syntax, <code class="inline">[]</code>. </p>
+<pre><code>=&gt; %{:key =&gt; &quot;value&quot;}[:key] 
+&quot;value&quot;</code></pre>
+<p>
+If the key is an atom you can also use the static lookup syntax. </p>
+<pre><code>=&gt; %{:key =&gt; &quot;value&quot;}.key 
+&quot;value&quot;</code></pre>
+<p>
+Or through the Map module. </p>
+<pre><code>=&gt; Map.get(%{a: 1}, :a) 
+1</code></pre>
+<h3>
+  How can you read a value from a Map using pattern matching?</h3>
+<pre><code>=&gt; %{:a =&gt; a} = %{:a =&gt; 12, :b =&gt; 14} 
+=&gt; a 
+12</code></pre>
+<p>
+The variable <code class="inline">a</code> above is set using pattern matching. It will return the value of the key <code class="inline">:a</code>. In this case that is 12.</p>
+<h3>
+  What happens when you try to pattern match on a key that doesn't exist?</h3>
+<p>
+An error is thrown. The below will return a <code class="inline">MatchError</code>. </p>
+<pre><code>%{:c =&gt; c} = %{:a =&gt; 12, :b =&gt; 14} 
+=&gt; (MatchError)</code></pre>
+<h3>
+  Can you use a variable for defining a key?</h3>
+<p>
+Yes. In the example below the variable <code class="inline">t</code> is a variable used as a key for the value “dog”. </p>
+<pre><code>=&gt; t = :type
+=&gt; %{t =&gt; &quot;dog&quot;, :name =&gt; &quot;Abby&quot;}[:type] 
+&quot;dog&quot;</code></pre>
+<p>
+<a href="tags/elixir-deck.html" target="_blank">More Elixir lang decks</a></p>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

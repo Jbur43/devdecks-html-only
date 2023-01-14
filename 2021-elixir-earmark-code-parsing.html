@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="S1c7DUkzXBwcDzgyA3pQKBssLQkALisHs6qbddotzPatI88_sFe1IjIn" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="elixir, earmark" name="keywords"><meta content="elixir earmark example" name="description">
+<title>Migrating to Elixir&#39;s Earmark for markdown processing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-elixir-earmark-code-parsing" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">Migrating to Elixir&#39;s Earmark for markdown processing</h1>
+      <time>2021-06-05</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/elixir.html">elixir</a><a class="blog-tag" href="tags/earmark.html">earmark</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+Prior to migrating to Earmark any html needed for the <a href="index.html" target="_blank">DevDeck cards</a> had been hard coded. Switching to Earmark for markdown processing now saves me a lot of time in card creation. Previously I would have to save a card question or answer with a code block resembling this:</p>
+<pre><code>&quot;&quot;&quot;Multi-line string of text
+  &lt;br /&gt;
+  &lt;pre&gt;&lt;code&gt;IO.inspect &quot;some code&quot;&lt;/code&gt;&lt;/pre&gt;
+&quot;&quot;&quot;</code></pre>
+<p>
+Now I can accomplish the same thing with:</p>
+<pre><code>&quot;&quot;&quot;Multi-line string of text
+  \n
+  ```IO.inspect &quot;some code&quot;&lt;/code&gt;&lt;/pre&gt;```
+&quot;&quot;&quot;</code></pre>
+<p>
+It might not look like a big deal but the minutia required to get HTML formatted correctly for each of the of questions and answers requires extra attention to detail and is prone to mistakes.</p>
+<p>
+If you’re unfamiliar with markdown processors, they essentially take a set of rules and convert those rules to HTML nodes. For example the open and closed backticks above (<code class="inline">repetitions sake example</code>) get converted the <code class="inline">&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</code> html nodes for displaying code snippets in a web browser.</p>
+<p>
+The migration to Earmark included three steps:</p>
+<ol>
+  <li>
+Add Earmark as a project dependency  </li>
+  <li>
+Use the Earmark client to process markdown  </li>
+  <li>
+Write and execute a migration to convert hard coded HTML to markdown.  </li>
+</ol>
+<h2>
+  Step one: adding Earmark as a project dependency</h2>
+<p>
+Include Earmark as a project dependency in your <code class="inline">mix.exs</code> file:</p>
+<pre><code>defp deps do
+  [
+    ...
+    {:earmark, &quot;&gt;= 1.4.15&quot;}
+  ]
+end</code></pre>
+<p>
+And update dependencies with the command <code class="inline">mix deps.get</code>.</p>
+<h2>
+  Step two: use the Earmark client to process markdown</h2>
+<p>
+I have to use the Earmark client when my server calls for the cards. For this application I am using LiveView for websocket based client/server data transactions so I added the Earmark functionality to my <code class="inline">card_live.ex</code> file which will include the card data in the rendering of the <code class="inline">card.html.leex</code> template. I use the <code class="inline">as_html</code> function on the <code class="inline">Earmark</code> module to accomplish this. That update looked like:</p>
+<pre><code>def mount(%{&quot;uuid&quot; =&gt; uuid} = params, _session, socket) do
+  cards = Card.from_uuid(uuid)
+  cards = Enum.map(cards, fn (card) -&gt;
+    {:ok, answer, _opt} = Earmark.as_html(card.answer)
+    {:ok, question, __opt} = Earmark.as_html(card.question)
+    %{card | answer: answer, question: question}
+  end)
+
+  {:ok, assign(socket, cards: cards)}
+end</code></pre>
+<p>
+Above I am mapping over a list of cards and processing the question and answer markdown before assigning the cards to the socket.</p>
+<p>
+The rendering didn’t change but this is what the template code looks like in my <code class="inline">card.html.leex</code> file:</p>
+<pre><code>&lt;%= @cards |&gt; Enum.with_index |&gt; Enum.map(fn({card, index}) -&gt;  %&gt;
+  &lt;div id=&quot;card&quot;&gt;
+    &lt;span&gt;&lt;%= raw card.question %&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;%= raw card.answer %&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;% end) %&gt;</code></pre>
+<h2>
+  Step 3: Write and execute a migration against existing cards to convert hard coded HTML to markdown.</h2>
+<p>
+First generate a new migration file on the command line through:</p>
+<pre><code>mix ecto.gen.migration earmark_cards</code></pre>
+<p>
+And then in the migration file I convert all of the question and answer strings using <code class="inline">String.replace</code> and replace the html code matched with its markdown equivalent, I annotate some of the script where I think it could be helpful.</p>
+<pre><code class="makeup elixir"><span class="kd">defmodule</span><span class="w"> </span><span class="nc">DevDecks.Repo.Migrations.EarmarkCards</span><span class="w"> </span><span class="k" data-group-id="1819054066-1">do</span><span class="w">
+  </span><span class="kn">use</span><span class="w"> </span><span class="nc">Ecto.Migration</span><span class="w">
+
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">up</span><span class="w"> </span><span class="k" data-group-id="1819054066-2">do</span><span class="w">
+    </span><span class="c1"># Get all decks and then all the cards from those decks (this could be simplified)</span><span class="w">
+    </span><span class="nc">DevDecks.Deck</span><span class="o">.</span><span class="n">query_uuids</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="1819054066-3">(</span><span class="k" data-group-id="1819054066-4">fn</span><span class="p" data-group-id="1819054066-5">(</span><span class="n">uuid</span><span class="p" data-group-id="1819054066-5">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nc">DevDecks.Card</span><span class="o">.</span><span class="n">from_uuid</span><span class="p" data-group-id="1819054066-6">(</span><span class="n">uuid</span><span class="p" data-group-id="1819054066-6">)</span><span class="w"> </span><span class="k" data-group-id="1819054066-4">end</span><span class="p" data-group-id="1819054066-3">)</span><span class="w">
+    </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="1819054066-7">(</span><span class="k" data-group-id="1819054066-8">fn</span><span class="p" data-group-id="1819054066-9">(</span><span class="n">card_set</span><span class="p" data-group-id="1819054066-9">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+      </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="1819054066-10">(</span><span class="n">card_set</span><span class="p">,</span><span class="w"> </span><span class="k" data-group-id="1819054066-11">fn</span><span class="p" data-group-id="1819054066-12">(</span><span class="n">card</span><span class="p" data-group-id="1819054066-12">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">
+        </span><span class="c1"># some test cards don&#39;t have answers so add a default blank string</span><span class="w">
+        </span><span class="n">answer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">card</span><span class="o">.</span><span class="n">answer</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">
+        </span><span class="c1"># pipe the answer string through all of the regex string replacement</span><span class="w">
+        </span><span class="n">updated_answer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">answer</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-13">(</span><span class="sr">~r/&lt;pre&gt;&lt;code&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;```&quot;</span><span class="p" data-group-id="1819054066-13">)</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-14">(</span><span class="sr">~r/&lt;</span><span class="se">\/</span><span class="sr">code&gt;&lt;</span><span class="se">\/</span><span class="sr">pre&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;```&quot;</span><span class="p" data-group-id="1819054066-14">)</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-15">(</span><span class="sr">~r/&lt;code&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;`&quot;</span><span class="p" data-group-id="1819054066-15">)</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-16">(</span><span class="sr">~r/&lt;</span><span class="se">\/</span><span class="sr">code&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;`&quot;</span><span class="p" data-group-id="1819054066-16">)</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-17">(</span><span class="sr">~r/&lt;br </span><span class="se">\/</span><span class="sr">&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p" data-group-id="1819054066-17">)</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-18">(</span><span class="sr">~r/&lt;br</span><span class="se">\/</span><span class="sr">&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p" data-group-id="1819054066-18">)</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-19">(</span><span class="sr">~r/&lt;br&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p" data-group-id="1819054066-19">)</span><span class="w">
+
+        </span><span class="c1"># repeat steps for question (this could have been extracted to a function)</span><span class="w">
+        </span><span class="n">question</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">card</span><span class="o">.</span><span class="n">question</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w">
+        </span><span class="n">updated_question</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">question</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-20">(</span><span class="sr">~r/&lt;pre&gt;&lt;code&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;```&quot;</span><span class="p" data-group-id="1819054066-20">)</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-21">(</span><span class="sr">~r/&lt;</span><span class="se">\/</span><span class="sr">code&gt;&lt;</span><span class="se">\/</span><span class="sr">pre&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;```&quot;</span><span class="p" data-group-id="1819054066-21">)</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-22">(</span><span class="sr">~r/&lt;code&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;`&quot;</span><span class="p" data-group-id="1819054066-22">)</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-23">(</span><span class="sr">~r/&lt;</span><span class="se">\/</span><span class="sr">code&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;`&quot;</span><span class="p" data-group-id="1819054066-23">)</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-24">(</span><span class="sr">~r/&lt;br </span><span class="se">\/</span><span class="sr">&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p" data-group-id="1819054066-24">)</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-25">(</span><span class="sr">~r/&lt;br</span><span class="se">\/</span><span class="sr">&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p" data-group-id="1819054066-25">)</span><span class="w">
+        </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">String</span><span class="o">.</span><span class="n">replace</span><span class="p" data-group-id="1819054066-26">(</span><span class="sr">~r/&lt;br&gt;/</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p" data-group-id="1819054066-26">)</span><span class="w">
+
+        </span><span class="c1"># call the update function on the card context with the card uuid to find the card and the updated answer and question.</span><span class="w">
+        </span><span class="nc">DevDecks.Card</span><span class="o">.</span><span class="n">update</span><span class="p" data-group-id="1819054066-27">(</span><span class="p" data-group-id="1819054066-28">%{</span><span class="s">&quot;uuid&quot;</span><span class="w"> </span><span class="o">=</span><span class="o">&gt;</span><span class="w"> </span><span class="n">card</span><span class="o">.</span><span class="n">uuid</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;answer&quot;</span><span class="w"> </span><span class="o">=</span><span class="o">&gt;</span><span class="w"> </span><span class="n">updated_answer</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;question&quot;</span><span class="w"> </span><span class="o">=</span><span class="o">&gt;</span><span class="w"> </span><span class="n">updated_question</span><span class="p" data-group-id="1819054066-28">}</span><span class="p" data-group-id="1819054066-27">)</span><span class="w">
+      </span><span class="k" data-group-id="1819054066-11">end</span><span class="p" data-group-id="1819054066-10">)</span><span class="w">
+    </span><span class="k" data-group-id="1819054066-8">end</span><span class="p" data-group-id="1819054066-7">)</span><span class="w">
+  </span><span class="k" data-group-id="1819054066-2">end</span><span class="w">
+
+  </span><span class="c1"># add a down method for rollbacks if needed.</span><span class="w">
+  </span><span class="kd">def</span><span class="w"> </span><span class="nf">down</span><span class="w">
+    </span><span class="no">nil</span><span class="w">
+  </span><span class="k" data-group-id="1819054066-29">do</span><span class="w">
+</span><span class="k" data-group-id="1819054066-29">end</span></code></pre>
+<p>
+After testing this locally I deployed it using Gigalixir and ran the migration in production from the command line through <code class="inline">gigalixir run mix ecto.migrate</code> and could watch the migration through the logs using <code class="inline">gigalixir logs</code>.</p>
+<p>
+Following the successful migration the transition was complete.</p>
+<p>
+If you found this useful I also wrote a post about a migrating to add timestamps to the DevDecks database retroactively <a href="2021-retroactively-add-timestamps-in-phoenix-ecto.html" target="_blank">here</a>:</p>
+<p>
+You can find more Elixir posts <a href="tags/elixir.html" target="_blank">here</a>.</p>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

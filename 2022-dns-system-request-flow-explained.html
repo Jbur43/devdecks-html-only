@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="AHs3K3EjUQcvYCkWdTk5BwRmcmQRAhw7k1t_2BgJxWBnXkfn058INKxs" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="dns" name="keywords"><meta content="Explain how a DNS system handles requests" name="description">
+<title>DNS system request flow explained</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2022-dns-system-request-flow-explained" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">DNS system request flow explained</h1>
+      <time>2022-03-31</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/dns.html">dns</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+A DNS system takes a *fully qualified domain name and translates it into your web server’s IP address. There are a few steps a DNS system takes to handle this translation. This translation is also referred to as resolving a domain name.</p>
+<p>
+The DNS resolution will occur before your actual web server is accessed because your web server can only be accessed using its IP address.</p>
+<p>
+To resolve a DNS request:</p>
+<ol>
+  <li>
+A browser or other HTTP client sends a request to www.devdecks.io.  </li>
+  <li>
+Your browser will first reach out to a DNS server known as a resolver. This is the server that is responsible for making all of the requests needed to handle the domain name translation and will ultimately send your resolved IP address back to your client. It is typically run by your local internet service provider (ISP).  </li>
+  <li>
+The Resolver first talks to a <strong>Root Name Server</strong> (behind the scenes this is a grouping of name server’s, but it will only reach out to one). This server is responsible for interpreting the top level domain, eg .com, .io, .org, etc. Once it has deciphered the top level domain, it will return a pointer to the resolver. That pointer is the address of the appropriate top level domain name server, each top level domain will have a set of servers responsible for the next step in the request chain.  </li>
+  <li>
+Using that pointer the resolver then reaches out to the <strong>Name Server</strong> for .io domains. This will check the requests domain (devdecks) and respond to the resolver with a pointer to the <strong>DNS Provider Server</strong>. The name server knows where to look for this because when you registered your domain name, your dns provider made an entry into the .io name server with a pointer back to their system.  </li>
+  <li>
+Using this pointer the resolver reaches out to the DNS server for devdecks, which responds with the IP address. It knows about this domain entry because when you registered the domain name you created a hosted zone in the registrars system. The hosted zone contains the details of your domain name, including your IP address.  </li>
+  <li>
+The resolver returns the IP address to the http client.  </li>
+</ol>
+<p>
+This IP address is then used by your browser client to issue the request to your web server.</p>
+<p>
+TL/DR:</p>
+<ol>
+  <li>
+HTTP request made to www.devdecks.io.  </li>
+  <li>
+This request first hits a resolver.  </li>
+  <li>
+The resolver reaches out to the root name server for the IP of the name server.  </li>
+  <li>
+The resolver reaches out the name server for the DNS server IP.  </li>
+  <li>
+The resolver reaches out the the DNS server for the IP of your web server.  </li>
+  <li>
+HTTP client makes a request to the IP for www.devdecks.io.  </li>
+</ol>
+<p>
+*Fully qualified domain name: the complete domain name a web server can be reached at. For example www(subdomain).devdecks(domain).com(root domain). This does not include the http(s) protocol.</p>
+<p>
+Continued reading:</p>
+<ul>
+  <li>
+<a href="2022-how-do-subdomains-work-with-dns.html" target="_blank">How subdomains work with dns</a>  </li>
+  <li>
+<a href="2021-same-db-table-parent-child-relationship-rails.html" target="_blank">Same database table parent/child relationship using Rails</a>  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="UhwjWiB-EAF-fWpdNEEbAycAJD5RdTUn6obwTICoH794_1oIrDfp9Ezc" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="elixir, beam, processes" name="keywords"><meta content="overview of beam processes" name="description">
+<title>BEAM/Elixir processes for web programmers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-beam-elixir-processes-explained" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">BEAM/Elixir processes for web programmers</h1>
+      <time>2021-05-14</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/elixir.html">elixir</a><a class="blog-tag" href="tags/beam.html">beam</a><a class="blog-tag" href="tags/processes.html">processes</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+To start I think it’s useful to define a few concepts:</p>
+<p>
+Elixir ecosystem concepts:</p>
+<ol>
+  <li>
+BEAM is a virtual machine that powers concurrent functional languages like Erlang and Elixir.  </li>
+  <li>
+Erlang is a programming language that is supported by the BEAM VM.  </li>
+  <li>
+Elixir is a programming language built on top of Erlang designed for developer efficiency.  </li>
+</ol>
+<p>
+Computer processing concepts:</p>
+<ol start="4">
+  <li>
+CPU core is a smaller CPU/processor built into a larger CPU/processor. They were created to more efficiently handle processes and provide parallel execution (executing multiple functions at the same time).  </li>
+  <li>
+An OS process is a running application/program, like the BEAM VM or a web browser running on your computer. OS processes are created when you start these applications.  </li>
+  <li>
+An OS thread(s) can be used by an OS process to help it complete different tasks, it is lighter than an OS process in terms of resources and startup and cleanup. They are employed from OS processes.  </li>
+  <li>
+BEAM processes are like OS threads in their purpose but are even lighter and more efficient. They are employed from OS threads.  </li>
+</ol>
+<p>
+The BEAM VM achieves concurrency by running many small BEAM processes to handle different system functions, many being in the millions. These processes are independent of each other in terms of memory, execution context, and garbage collection.</p>
+<p>
+The BEAM VM is a running OS process and within the VM is a queue of BEAM processes waiting to be executed. BEAM defers the handling of the processes to schedulers, by default there is one scheduler employed for each core on the server. These schedulers pull processes from the queue and execute it for a short period of time and then puts the process back in the queue, pulls in a new process for execution and does this over and over again.</p>
+<p>
+Each process gets executed for less than a millisecond before it is put back into the queue. The reason for this is so CPU intensive functions do not block the execution of other processes. The example given by <a href="https://www.youtube.com/watch?v=-bCkha6U70o" target="_blank">Sasa Juric</a> is a function that calculates the sum of a large range of numbers like 1..1000000000000. This calculation would take a noticeable amount of time to return and we don’t want it to block other processes from execution, hence the reason for constant context switching.</p>
+<p>
+In a web based Elixir system different processes are used to handle various tasks like:</p>
+<ol>
+  <li>
+HTTP connections  </li>
+  <li>
+Database connections  </li>
+  <li>
+PubSub transactions  </li>
+</ol>
+<p>
+For each new HTTP connection a new process is issued and if that process fails due to a runtime execution error, or if a third party API is down, the rest of the processes will continue to function normally.</p>
+<p>
+This provides fault tolerance and high availability to your application, because a single error will not propagate to other users of your system. With some VM’s other than BEAM you need to handle more issues through written code because multiple requests are handled by the same execution context to achieve concurrency and if one of those requests error then all of the requests in that execution context will fail along with it.</p>
+<p>
+More Elixir process posts:
+<a href="2021-let-it-crash-explained.html" target="_blank">Let it crash explained</a>,
+<a href="2021-elixir-process-module-cheatsheet.html" target="_blank">Process module cheatsheet</a>,
+<a href="2021-introduction-to-elixir-processes-in-phoenix.html" target="_blank">Processes in phoenix</a>,
+<a href="2021-elixir-processes-concurrency-and-parallelism.html" target="_blank">Processes and concurrency</a></p>
+<p>
+Other useful resources:</p>
+<ul>
+  <li>
+<a href="https://elixirforum.com/t/understanding-the-advantages-of-let-it-crash-term/9748">https://elixirforum.com/t/understanding-the-advantages-of-let-it-crash-term/9748</a>  </li>
+  <li>
+<a href="https://www.youtube.com/watch?v=-bCkha6U70o">https://www.youtube.com/watch?v=-bCkha6U70o</a>  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F7W0VSKYS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2F7W0VSKYS');
+    </script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8" content="eyAWIDsSAAlJMCctd2l1JXgWMhhlHDsv3rguxkzMzu_Y-69sLBhT5xsy" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta content="elixir, deck, elixir-deck" name="keywords"><meta content="Understanding Elixir GenServer through explanation" name="description">
+<title>Understanding Elixir GenServer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link phx-track-static rel="stylesheet" href="css/app-02e14b945d8b05cb2897c7e476f6f184%EF%B9%96vsn=d.css"/>
+    <script defer phx-track-static type="text/javascript" src="js/app-a031d7efdf9d092a14f7e85a21871ce8%EF%B9%96vsn=d.js"></script>
+    <!-- SIDENAV SCRIPT -->
+    <script type="text/javascript">
+      /* Set the width of the side navigation to 250px */
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443"
+     crossorigin="anonymous"></script>
+    <ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2976969447542443"
+     data-ad-slot="2745114693">
+    </ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </head>
+  <body>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- FOR WHEN YOU NEED NESTED NAV USE THIS EXAMPLE -->
+      <!-- <p class="dropdown-btn">Elixir Phoenix</p>
+      <div class="dropdown-container">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+      </div> -->
+      <a href="page/about.html">About</a>
+      <a href="page/attributions.html">Attributions</a>
+    </div>
+
+    <nav id="nav">
+      <a href="index.html"><img id="logo" class="logo" src="images/logo-7c9e547c805c708decc674b648163720%EF%B9%96vsn=d.svg" alt="DevDecks icon" /></a>
+      <a href="studio.html"><img id="settings-icon" class="nav-icon lg" src="images/studio-2-00b6814e1495c4cb9ff6987d9b98753f%EF%B9%96vsn=d.svg" alt="studio icon" /></a>
+      <a id="darkmode-toggler"><img id="settings-icon" class="nav-icon" src="images/night-mode-41cf0bc8abaacbbd59e2fdca8ac55a85%EF%B9%96vsn=d.svg" alt="dark mode icon" /></a>
+      <img id="settings-icon" onclick="openNav()" class="nav-icon" src="images/more-79c5db1b1206b6b8195fee1ceb385178%EF%B9%96vsn=d.svg" alt="more pages icon" />
+    </nav>
+    <br />
+<main role="main" class="container">
+  <p class="alert alert-info" role="alert"></p>
+  <p class="alert alert-danger" role="alert"></p>
+<div class="page blog-post">
+  <div id="2021-understanding-elixir-genserver" style="margin-bottom: 3rem;">
+<a class="all-posts-link" href="index.html">All posts</a>
+    <div class="flex-row-d-column-m">
+      <h1 class="link-title">Understanding Elixir GenServer</h1>
+      <time>2021-10-04</time>
+    </div>
+
+    <div class="flex-row-no-space">
+      <img class="icon-sm" src="images/tag2-730d3eac769a667d071582853b151791%EF%B9%96vsn=d.svg" />&nbsp<a class="blog-tag" href="tags/elixir.html">elixir</a><a class="blog-tag" href="tags/deck.html">deck</a><a class="blog-tag" href="tags/elixir-deck.html">elixir-deck</a>
+    </div>
+
+    <div class="blog-post-body">
+<p>
+This and the other “Deck” posts are a repurposing of flashcard study decks to Q&amp;A blog posts. Google was not showing love to this content as a set of flashcards and I didn’t want to delete them entirely, I hope you find it useful.</p>
+<h3>
+  What is an Elixir GenServer?</h3>
+<p>
+It is a means of spawning an Elixir Process but with the added intention of keeping track of state. GenServer comes with a set of predefined callback functions to help with this.</p>
+<h3>
+  What are the advantages of GenServer vs other process management tools?</h3>
+<ol>
+  <li>
+<code class="inline">GenServer</code>s callback functions are standardized. Once you understand them, you understand how to work with any <code class="inline">GenServer</code>.   </li>
+  <li>
+<code class="inline">GenServer</code>s provide a mechanism for keeping track of state.   </li>
+  <li>
+<code class="inline">GenServer</code>s provide the ability to execute asynchronously or synchronously.   </li>
+  <li>
+<code class="inline">GenServer</code>s provide functionality for tracing and error reporting.  </li>
+</ol>
+<h3>
+  Are GenServer processes supervised by a parent process?</h3>
+<p>
+They can be, but it’s not required.</p>
+<h3>
+  Do all GenServer callback functions need to be implemented in each GenServer?</h3>
+<p>
+No. Each <code class="inline">GenServer</code> only needs to implement the callback functions it needs. The only required callback function is <code class="inline">init</code>.</p>
+<h3>
+  What is the init callback function used for?</h3>
+<p>
+This is invoked whenever the server is started. It can be used to pass initial state to the GenServer.</p>
+<h3>
+  What is the handle_call callback function used for?</h3>
+<p>
+This callback is used whenever you want to handle synchronous messages to the server. It is invoked through <code class="inline">GenServer.call</code>.</p>
+<h3>
+  What is the handle_cast callback function used for?</h3>
+<p>
+This callback is used whenever you want to handle asynchronous messages to the server. It is invoked through <code class="inline">GenServer.cast</code>.</p>
+<h3>
+  What is the handle_info callback function used for?</h3>
+<p>
+This is used for all other messages to the server, for example process crash messages. It is invoked in different ways including the <code class="inline">Kernel.send</code> function or <code class="inline">Process.monitor</code>.</p>
+<h3>
+  How many GenServer callback functions exist and what are they?</h3>
+<ol start="8">
+  <li>
+<code class="inline">init</code>, <code class="inline">handle_call</code>, <code class="inline">handle_cast</code>, <code class="inline">handle_info</code>, <code class="inline">code_change</code>, <code class="inline">format_status</code>, <code class="inline">handle_continue</code>, <code class="inline">terminate</code>.  </li>
+</ol>
+<h3>
+  Are GenServers used for code organization, for handling mutable state, or for providing concurrency?</h3>
+<p>
+GenServers are used to for handling of mutable state and for providing concurrency. GenServer’s are not used for code organization.</p>
+<ul>
+  <li>
+<a href="tags/elixir-deck.html" target="_blank">More Elixir lang decks</a>  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+    <div id="privacy-policy-container">
+      <a href="page/privacy.html">Privacy Policy</a>
+      <div>Built with 🛠️ and ☕ in ⛰️</div>
+    </div>
+
+  </body>
+</html>
